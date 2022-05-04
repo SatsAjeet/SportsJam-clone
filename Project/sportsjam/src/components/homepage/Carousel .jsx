@@ -1,5 +1,8 @@
 import React from 'react'
 import SimpleImageSlider from "react-simple-image-slider";
+import styled from "styled-components"
+
+
 
 
 
@@ -19,7 +22,7 @@ const Carousel  = () => {
     <div>
          <SimpleImageSlider
                 width={"100%"}
-                height={"90vh"}
+                height={"80vh"}
                 images={images}
                 showBullets={true}
                 showNavs={true}

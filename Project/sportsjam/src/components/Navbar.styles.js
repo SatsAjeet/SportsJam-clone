@@ -44,3 +44,14 @@ export const Cart=styled.div`
     align-items: center;
     border-radius: 4px;
 `
+
+export const Nav3=styled.div`
+    width: 98%;
+    height: 50px;
+    border: 1px solid grey;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    gap: 2%;
+    padding-right: 2%;
+`
