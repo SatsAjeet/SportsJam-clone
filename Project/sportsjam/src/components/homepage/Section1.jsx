@@ -10,7 +10,7 @@ const Section1 = () => {
             <div className={Styles.contentoverlay}></div>
             <img
               className={Styles.contentimage}
-              src="\HomePageImages\sport1.webp"
+              src="\HomePageImages\sport1.webp" alt=""
             />
             <div className={`${Styles.contentdetails} ${Styles.fadeInbottom}`}>
               <h2 className={Styles.contenttitle}>SPORTS</h2>
@@ -27,7 +27,7 @@ const Section1 = () => {
             <div className={Styles.contentoverlay}></div>
             <img
               className={Styles.contentimage}
-              src="\HomePageImages\sport2.webp"
+              src="\HomePageImages\sport2.webp" alt=""
             />
             <div className={`${Styles.contentdetails} ${Styles.fadeInbottom}`}>
               <h2 className={Styles.contenttitle}>FITNESS</h2>
@@ -44,7 +44,7 @@ const Section1 = () => {
             <div className={Styles.contentoverlay}></div>
             <img
               className={Styles.contentimage}
-              src="\HomePageImages\sport3.webp"
+              src="\HomePageImages\sport3.webp" alt=""
             />
             <div className={`${Styles.contentdetails} ${Styles.fadeInbottom}`}>
               <h2 className={Styles.contenttitle}>SHOES</h2>

@@ -2,7 +2,7 @@
 
 
 .sec1{
-  width: 95%;
+  width: 99%;
   display: flex;
   margin: auto;
   margin-top: 1%;
@@ -103,12 +103,12 @@ body{
 }
 
 .content:hover .contentdetails{
-  top: 77%;
+  top: 74%;
   left: 50%;
   opacity: 1;
   background-color: dimgray;        
   /* border: 1px solid blue; */
-  height: 44%;
+  height: 50%;
   opacity: 0.8;
   color: white;
 }
@@ -143,4 +143,7 @@ body{
 .contenttext{
   margin-top: 10px;
   margin-bottom: 20px;
+}
+.contenttitle{
+  margin-bottom: 30px;
 }
