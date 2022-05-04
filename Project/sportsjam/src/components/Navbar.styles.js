@@ -24,7 +24,7 @@ export const Nav1Flex=styled.div`
 export const Nav2=styled.div`
     width: 100%;
     height: 120px;
-    border: 1px solid grey;
+    /* border: 1px solid grey; */
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -45,10 +45,11 @@ export const Cart=styled.div`
     border-radius: 4px;
 `
 
+// nav3
 export const Nav3=styled.div`
     width: 98%;
-    height: 50px;
-    border: 1px solid grey;
+    height: 25px;
+    /* border: 1px solid grey; */
     display: flex;
     justify-content: left;
     align-items: center;

@@ -1,6 +1,5 @@
 import React from 'react'
 import SimpleImageSlider from "react-simple-image-slider";
-import styled from "styled-components"
 
 
 
@@ -21,14 +20,17 @@ const Carousel  = () => {
   return (
     <div>
          <SimpleImageSlider
-                width={"100%"}
+                width={"98%"}
                 height={"80vh"}
                 images={images}
                 showBullets={true}
                 showNavs={true}
-                style={{ cursor: "pointer" }}
+                style={{ cursor: "pointer" , marginLeft:"7px" } }
                 navSize={60}
                 navMargin={20}
+                loop={true}
+                autoPlay={true}
+                autoPlayDelay={1.0}
             />
     </div>
   )

@@ -42,6 +42,7 @@ const Navbar = () => {
                     <Link to="/cart" className={Styles.cart}>Shopping Cart</Link>
                 </Cart>
             </Nav2>
+            <hr />
           
 
 
@@ -49,6 +50,7 @@ const Navbar = () => {
             <Nav3>
                 <h1>Dropdown Menu</h1>
             </Nav3>
+            <hr />
 
 
 
