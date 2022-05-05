@@ -31,6 +31,7 @@ const Carousel  = () => {
                 loop={true}
                 autoPlay={true}
                 autoPlayDelay={1.0}
+                
             />
     </div>
   )

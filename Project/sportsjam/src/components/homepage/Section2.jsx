@@ -154,8 +154,8 @@ const Section2 = () => {
       ) : (
         ""
       )}
-      <br></br>
-      <hr />
+      <br>
+      </br>
     </div>
   );
 };
