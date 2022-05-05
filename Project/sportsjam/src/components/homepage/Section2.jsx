@@ -7,7 +7,7 @@ const Section2 = () => {
   const handlestate = (value) => {
     setState(value);
   };
-  console.log(state);
+//   console.log(state);
   return (
     <div>
       <h1 className={Styles.sec2head}>OUR CUSTOMIZED SERVICES</h1>
