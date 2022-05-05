@@ -52,6 +52,7 @@ body{
   /* color: #1a1a1a; */
   text-align: center;
   margin-bottom: 10px;
+
 }
 
 .content {
@@ -146,4 +147,5 @@ body{
 }
 .contenttitle{
   margin-bottom: 30px;
+  margin-top: 20px;
 }
