@@ -34,7 +34,7 @@ const Navbar = () => {
             <Nav2>
                 <img src="/HomePageImages/homelogo.webp" alt="" className={Styles.homelogo} onClick={()=>navigate("/home")} />
                 <SearchBar>
-                    <input type="text" name="" id="" placeholder='Search' className={Styles.nav2inp} />
+                    <input type="text" name="" id="" placeholder='     Search' className={Styles.nav2inp} />
                     <span className="iconify" data-icon="bx:search" data-width="35" data-height="35"></span>
                 </SearchBar>
                 <Cart>

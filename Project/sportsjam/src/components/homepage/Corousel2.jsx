@@ -22,10 +22,6 @@ const Corousel2 = () => {
                 autoPlay={true}
                 autoPlayDelay={2.0}
             />
-            
-            <br />
-            <br />
-
     </div>
   )
 }

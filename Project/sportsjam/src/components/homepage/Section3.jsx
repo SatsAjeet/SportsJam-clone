@@ -14,6 +14,7 @@ const Section3 = () => {
       <br />
       <br/>
       <img src="HomePageImages\sec3-img3.jpg" alt="" className={Styles.img} />
+      <br />
     </div>
   )
 }

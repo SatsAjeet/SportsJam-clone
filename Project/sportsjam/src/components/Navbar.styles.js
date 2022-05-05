@@ -3,7 +3,7 @@ import styled from "styled-components";
 
 //nav1
 export const Nav1=styled.div`
-    width: 98%;
+    width: 100%;
     height: 50px;
     /* border: 1px solid red; */
     background-color: black;
@@ -11,7 +11,7 @@ export const Nav1=styled.div`
     display: flex;
     justify-content: right;
     align-items: center;
-    gap: 2%;
+    gap: 1%;
     padding-right: 2%;
 `
 export const Nav1Flex=styled.div`
@@ -37,7 +37,8 @@ export const SearchBar=styled.div`
     display: flex;
     border: 1px solid grey;
     align-items: center;
-    border-radius: 4px;`
+    border-radius: 4px;
+    `
 //cart
 export const Cart=styled.div`
     display: flex;
