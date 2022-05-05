@@ -1,11 +1,6 @@
 import React from 'react'
 import SimpleImageSlider from "react-simple-image-slider";
 
-
-
-
-
-
 const images = [
     { url: "HomePageImages/slider1.jpg" },
     { url: "HomePageImages/slider2.jpg" },
