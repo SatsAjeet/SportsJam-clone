@@ -1,4 +1,3 @@
-import { legacy_createStore as createStore } from "redux"
-import { reducer } from "./reducer.js"
-
-export const store= createStore(reducer)
+import {legacy_createStore as createStore} from "redux"
+import { dataReducer } from "./reducer"
+export const store = createStore(dataReducer)
