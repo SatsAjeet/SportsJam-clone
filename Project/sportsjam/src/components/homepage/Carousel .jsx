@@ -25,7 +25,7 @@ const Carousel  = () => {
                 images={images}
                 showBullets={true}
                 showNavs={true}
-                style={{ cursor: "pointer" , marginLeft:"7px" } }
+                style={{ cursor: "pointer" , marginLeft:"14px" , marginTop:"20px"} }
                 navSize={60}
                 navMargin={20}
                 loop={true}
