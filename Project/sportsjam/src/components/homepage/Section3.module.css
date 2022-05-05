@@ -1,0 +1,20 @@
+.left,.right{
+    width: 47%;
+    margin-left: 2%;
+}
+.leftText{
+    text-align: left;
+    margin-left: 20%;
+    margin-top: 1%;
+    font-weight: 300;
+    
+}
+.rightText{
+    text-align: right;
+    margin-right: 14%;
+    margin-top: -2%;
+    font-weight: 300;
+}
+.img{
+    width: 100%;
+}
