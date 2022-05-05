@@ -1,0 +1,29 @@
+.grid {
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:20px;
+    font-family: open sans
+}
+.menu {
+    width:400px;
+    margin:50px 20px;
+}
+.catagary {
+    height:200px;
+    overflow:scroll;
+}
+.P {
+    height:30px;
+    background-color:#cacaca;
+    font-size: 15px;
+    padding-top:10px;
+}
+.H {
+    margin-top:10px;
+   height:30px;
+   background-color:#FFF0F5;
+}
+.viewsshow:hover {
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+

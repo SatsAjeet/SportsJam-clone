@@ -1,0 +1,2 @@
+export const SORT_DATA = "SORT_DATA";
+export const DESCRIPTION_DATA = "DESCRIPTION_DATA"
