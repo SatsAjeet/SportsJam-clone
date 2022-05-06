@@ -1,7 +1,9 @@
 import React from 'react'
 import { Cart, Nav1, Nav1Flex, Nav2, Nav3, SearchBar } from './Navbar.styles'
 import { Link, useNavigate } from 'react-router-dom'
-import Styles from "./Navbar.module.css"
+import Styles from "./Navbar.module.css";
+import NavDropDown from './NavDropDown';
+
 
 const Navbar = () => {
 
@@ -48,7 +50,7 @@ const Navbar = () => {
 
             {/* nav3 */}
             <Nav3>
-                <h1>Dropdown Menu</h1>
+                <NavDropDown/>
             </Nav3>
             <hr />
 
