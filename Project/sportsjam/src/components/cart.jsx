@@ -62,20 +62,47 @@ const Quantity = styled.div`
   border: 1px solid gray;
   width: 40px;
   height: 30px;
-  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-item: center;
+  font-size: 20px;
 `;
 
 const Cart = () => {
-  const data = useSelector((state) => state.cartdata);
+  const store = useSelector((state) => state);
+  const data = store.cartdata
+  console.log(data)
   const navigate = useNavigate();
   const dispatch = useDispatch();
 
   const handleDelete = (id) => {
     dispatch(delete_cart_data(id))
+    var deletedata = data.filter((item) => item.id !== id);
+    localStorage.setItem("cartdata", JSON.stringify(deletedata));
   }
   React.useEffect(() => {
-    dispatch(cart_data(cartdatavalue))
+    //localStorage.setItem('cartdata', JSON.stringify(cartdatavalue))
+    let data = JSON.parse(localStorage.getItem('cartdata'));
+    dispatch(cart_data(data))
   }, [])
+  const handleQuantity = (item) => {
+    if (item.qty == 1) {
+      dispatch(delete_cart_data(item.id));
+      var deletedata = data.filter((elem) => item.id !== elem.id);
+      localStorage.setItem("cartdata", JSON.stringify(deletedata));
+    } else {
+      dispatch(decrease_qty(item.id));
+      // var decreasedata = [...data.map((elem) => {
+      //   console.log(elem.id, "elem")
+      //   console.log(item.id, "item");
+      //   if (item.id == elem.id) {
+      //     item.qty--;
+      //     console.log(item)
+      //   }
+      // })];
+      // console.log("data",decreasedata)
+    }
+  }
   return (
     <>
       <Div>Shopping Cart</Div>
@@ -102,7 +129,7 @@ const Cart = () => {
                   <Td>
                     <div style={{ display: "flex", textAlign: "center" }}>
                       <Button
-                        onClick={() => dispatch(decrease_qty(item.id))}>-</Button>
+                        onClick={() => handleQuantity(item)}>-</Button>
                       <Quantity>{item.qty}</Quantity>
                       <Button
                         onClick={() => dispatch(increase_qty(item.id))}>+</Button>

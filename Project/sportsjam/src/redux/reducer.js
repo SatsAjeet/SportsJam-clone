@@ -30,27 +30,28 @@ export const dataReducer = (state = initState, { type, payload }) => {
          case DELETE_CART_DATA: {
              return {
                  ...state,
-                 cartData: state.cartdata.filter((item) =>  item.id !== payload )
+                 cartdata: state.cartdata.filter((item) =>  item.id !== payload )
              }
          }
+         
          case INCREASE_QTY: {
              return {
                  ...state,
-                 cartData: state.cartdata.map((item) => {
+                 cartData:[ ...state.cartdata.map((item) => {
                      if (item.id == payload) {
-                         ++item.qty
+                         item.qty+=1
                      }
-                 })
+                 })]
              }
          }
          case DECREASE_QTY: {
              return {
                  ...state,
-                 cartData: state.cartdata.map((item) => {
+                 cartData:[ ...state.cartdata.map((item) => {
                      if (item.id == payload) {
-                         --item.qty
+                         item.qty--
                      }
-                 })
+                 })]
              }
          }
          default :{
