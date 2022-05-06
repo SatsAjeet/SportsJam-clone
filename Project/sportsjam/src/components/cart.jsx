@@ -64,7 +64,7 @@ const Quantity = styled.div`
   height: 30px;
   display: flex;
   justify-content: center;
-  align-item: center;
+ align-items: center;
   font-size: 20px;
 `;
 
