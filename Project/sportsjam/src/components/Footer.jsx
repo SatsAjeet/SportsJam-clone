@@ -110,25 +110,25 @@ const Footer = () => {
           <br />
           <h6>CONNECT WITH US</h6>
           <span
-            class="iconify-inline"
+            className="iconify-inline"
             data-icon="ant-design:facebook-outlined"
             data-width="40"
             data-height="40"
           ></span>
           <span
-            class="iconify-inline"
+            className="iconify-inline"
             data-icon="jam:twitter-square"
             data-width="40"
             data-height="40"
           ></span>
           <span
-            class="iconify-inline"
+            className="iconify-inline"
             data-icon="akar-icons:instagram-fill"
             data-width="40"
             data-height="40"
           ></span>
           <span
-            class="iconify-inline"
+            className="iconify-inline"
             data-icon="fa-brands:youtube-square"
             data-width="40"
             data-height="40"
