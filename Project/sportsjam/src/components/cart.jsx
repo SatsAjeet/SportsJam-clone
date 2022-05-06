@@ -98,7 +98,7 @@ const Cart = () => {
                     <Img src={item.img} alt={item.img} />
                     <p>{item.desc}</p>
                   </Td1>
-                  <Td>₹{item.price}</Td>
+                  <Td>₹{item.mrp}</Td>
                   <Td>
                     <div style={{ display: "flex", textAlign: "center" }}>
                       <Button
@@ -108,7 +108,7 @@ const Cart = () => {
                         onClick={() => dispatch(increase_qty(item.id))}>+</Button>
                     </div>
                   </Td>
-                  <Td>₹{item.price * item.qty}</Td>
+                  <Td>₹{item.mrp * item.qty}</Td>
                   <Td>
                     <Cross
                       onClick={() => handleDelete(item.id)}
