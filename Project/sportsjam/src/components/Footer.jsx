@@ -141,13 +141,9 @@ const Footer = () => {
             style={{ display: "block" }}
           />
           <div className={Styles.txt}>POWERED BY</div>
-          <img src="/HomePageImages/capillary-white.png" alt="" width={"120px"} height={"50px"}  className={Styles.fourthImg}/>
+          <img src="/HomePageImages/capillary-white.png" alt="" width={"80px"} height={"50px"}  className={Styles.fourthImg}/>
         </div>
-        
       </div>
-
-      <br />
-      <br />
     </div>
   );
 };
