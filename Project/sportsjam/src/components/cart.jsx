@@ -1,9 +1,8 @@
 import React from 'react'
 import styled from "styled-components"
-import {cart_data,delete_cart_data} from "../redux/action"
+import {cart_data,increase_qty,decrease_qty,delete_cart_data} from "../redux/action"
 import { useSelector, useDispatch } from 'react-redux'
 import { useNavigate } from "react-router-dom";
-
 
 const Div = styled.div`
   padding: 10px;
@@ -53,10 +52,12 @@ width: 30px;
 height: 30px;
 font-size: 25px;
 `
-const Input = styled.input`
-width: 40px;
-height: 30px;
-text-align: center;`
+const Quantity = styled.div`
+  border: 1px solid gray;
+  width: 40px;
+  height: 30px;
+  text-align: center;
+`;
 
 const Cart = () => {
   const data = useSelector((state) => state.cartdata);
@@ -67,10 +68,11 @@ const Cart = () => {
   const handleclick = (desc) => {
     dispatch(delete_cart_data(desc))
   }
-  const handleChange = (e,price) => {
-    var qty = e.target.value
-    console.log(qty*price)
-  }
+
+  React.useEffect(() => {
+      dispatch(cart_data());
+    },
+    [dispatch]);
   return (
     <>
       <Div>Shopping Cart</Div>
@@ -96,12 +98,14 @@ const Cart = () => {
                   <Td>₹{item.price}</Td>
                   <Td>
                     <div style={{ display: "flex", textAlign: "center" }}>
-                      <Button>-</Button>
-                      <Input type="number" value={item.qty} onChange={(e)=>handleChange(item.price,e)} />
-                      <Button>+</Button>
+                      <Button
+                        onClick={() => dispatch(decrease_qty(item.id))}>-</Button>
+                      <Quantity>{item.qty}</Quantity>
+                      <Button
+                        onClick={() => dispatch(increase_qty(item.id))}>+</Button>
                     </div>
                   </Td>
-                  <Td>₹{item.price*item.qty}</Td>
+                  <Td>₹{item.price * item.qty}</Td>
                   <Td>
                     <Cross
                       onClick={() => handleclick(item.desc)}

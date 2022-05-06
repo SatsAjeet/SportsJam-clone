@@ -1,6 +1,6 @@
 import products from "../products.json";
 import cartdata from "../cartdata.json"
-import { DESCRIPTION_DATA, SORT_DATA, CART_DATA, DELETE_CART_DATA } from "./actiontypes";
+import { DESCRIPTION_DATA, SORT_DATA, CART_DATA, DELETE_CART_DATA,INCREASE_QTY,DECREASE_QTY } from "./actiontypes";
 
 const initState = {
     products: [...products],
@@ -31,6 +31,26 @@ export const dataReducer = (state=initState, {type,payload})=>{
              return {
                  ...state,
                  cartData: cartdata.filter((item)=>item.desc!= payload)
+             }
+         }
+         case INCREASE_QTY: {
+             return {
+                 ...state,
+                 cartData: cartdata.map((item) => {
+                     if (item.id == payload) {
+                         ++item.qty
+                     }
+                 })
+             }
+         }
+         case DECREASE_QTY: {
+             return {
+                 ...state,
+                 cartData: cartdata.map((item) => {
+                     if (item.id == payload) {
+                         --item.qty
+                     }
+                 })
              }
          }
          default :{
