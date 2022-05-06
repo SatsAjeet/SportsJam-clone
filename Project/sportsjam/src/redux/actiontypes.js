@@ -1,2 +1,4 @@
 export const SORT_DATA = "SORT_DATA";
 export const DESCRIPTION_DATA = "DESCRIPTION_DATA"
+export const CART_DATA = "CART_DATA"
+export const DELETE_CART_DATA = "DELETE_CART_DATA"

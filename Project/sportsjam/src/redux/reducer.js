@@ -1,8 +1,10 @@
 import products from "../products.json";
-import { DESCRIPTION_DATA, SORT_DATA } from "./actiontypes";
+import cartdata from "../cartdata.json"
+import { DESCRIPTION_DATA, SORT_DATA, CART_DATA, DELETE_CART_DATA } from "./actiontypes";
 
 const initState = {
-    products:[...products]
+    products: [...products],
+    cartdata: [...cartdata],
 }
 
 export const dataReducer = (state=initState, {type,payload})=>{
@@ -18,7 +20,19 @@ export const dataReducer = (state=initState, {type,payload})=>{
                   ...state,
                   discriptionData:payload
               }
-          }
+         }
+         case CART_DATA: {
+             return {
+                 ...state,
+                 cartData: payload
+             }
+         }
+         case DELETE_CART_DATA: {
+             return {
+                 ...state,
+                 cartData: cartdata.filter((item)=>item.desc!= payload)
+             }
+         }
          default :{
              return state
          }
