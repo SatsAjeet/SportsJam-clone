@@ -39,7 +39,7 @@ const Product = ()=>{
       }
       
     return (
-        <div style={{display:"flex"}}>
+        <div style={{display:"flex",gap:"100px"}}>
             <div className={styles.menu}>
                  <div className={styles.P}>CATEGORY MENU</div>
                  <div className={styles.catagary}>
@@ -71,7 +71,7 @@ const Product = ()=>{
                    {
                   title: <h4 >BRAND</h4>,
                    itemId: '/1',
-            // elemBefore: () => <Icon name="users" />,
+              // elemBefore: () => <Icon name="users" />,
                    subNav: [
             
                   {
@@ -152,77 +152,77 @@ const Product = ()=>{
                           itemId: '/111',
                     },
 
-               ],
-             },
-          {
-            title: <h4>CATEGORY</h4>,
-            itemId: '/2',
-            subNav: [
-              {
-                title: <>
-                <input type="checkbox"/>
-                <lable>Badmintion Accessories</lable>
-             </>,
-                itemId: '/21',
-              },
-              {
-                title: <>
-                <input type="checkbox"/>
-                <lable>Badmintion Grips</lable>
-             </>,
-                itemId: '/22',
-              },
-              {
-                title: <>
-                <input type="checkbox"/>
-                <lable>Badmintion Rackets</lable>
-             </>,
-                itemId: '/23',
-              },
-              {
-                title: <>
-                <input type="checkbox"/>
-                <lable>Badmintion Shoes</lable>
-             </>,
-                itemId: '/24',
-              },
-              {
-                title: <>
-                <input type="checkbox"/>
-                <lable>Badmintion Accessories</lable>
-             </>,
-                itemId: '/25',
-              },
-              {
-                title:<>
-                <input type="checkbox"/>
-                <lable>Badmintion Shuttlecock</lable>
-          </>,
-                itemId: '/26',
-              },
-              {
-                title: <>
-                <input type="checkbox"/>
-                <lable>Badmintion Strings</lable>
-          </>,
-                itemId: '/27',
-              },
+                 ],
+               },
+               {
+                  title: <h4>CATEGORY</h4>,
+                  itemId: '/2',
+                  subNav: [
+                 {
+                   title: <>
+                   <input type="checkbox"/>
+                   <lable>Badmintion Accessories</lable>
+                 </>,
+                   itemId: '/21',
+                 },
+                 {
+                   title: <>
+                   <input type="checkbox"/>
+                   <lable>Badmintion Grips</lable>
+                 </>,
+                  itemId: '/22',
+                 },
+                  {
+                   title: <>
+                   <input type="checkbox"/>
+                   <lable>Badmintion Rackets</lable>
+                    </>,
+                    itemId: '/23',
+                  },
+                  {
+                    title: <>
+                     <input type="checkbox"/>
+                     <lable>Badmintion Shoes</lable>
+                    </>,
+                    itemId: '/24',
+                  },
+                  {
+                    title: <>
+                     <input type="checkbox"/>
+                     <lable>Badmintion Accessories</lable>
+                   </>,
+                    itemId: '/25',
+                  },
+                  {
+                   title:<>
+                     <input type="checkbox"/>
+                     <lable>Badmintion Shuttlecock</lable>
+                   </>,
+                   itemId: '/26',
+                  },
+                  {
+                   title: <>
+                   <input type="checkbox"/>
+                   <lable>Badmintion Strings</lable>
+                   </>,
+                  itemId: '/27',
+                  },
               
-            ],
-          },
+                ],
+              },
 
 
-          {
-            title: <h4>Brand</h4>,
+                  {
+                  title: <h4>PRICE</h4>,
            
-          },
-        ]}
-      />
+                },
+             ]}
+             />
 
-                 </div>
+            </div>
             <div>
             <div onClick ={handleSort} style={{display:"flex",justifyContent:"right",gap:"35%"}}>
-                <h3>Products-{data.length}</h3>
+                <h3>Found  {data.length}  product(s)</h3>
                 <select  style={{width:"150px",height:"40px",margin:"30px"}}>
                     <option value ="">SORT BY</option>
                     <option value="asc">Price low to heigh</option>

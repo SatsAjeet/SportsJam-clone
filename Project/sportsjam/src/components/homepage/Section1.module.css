@@ -139,6 +139,7 @@ body{
   margin-top: 10px;
   color: white;
   text-align: center;
+  cursor: pointer;
 }
 
 .contenttext{

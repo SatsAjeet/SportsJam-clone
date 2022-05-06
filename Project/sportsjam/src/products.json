@@ -4,6 +4,7 @@
         "title": "Babolat Satelite Lite Badminton Racket",
         "desc": "Babolat Satelite Lite Badminton Racket ",
         "price": "10,999",
+        "qty": 1,
         "mrp": 7149,
         "discount": 0
       },
@@ -12,7 +13,8 @@
         "title": "Babolat I Pulse Blast Badminton Racket",
         "desc": "Babolat I Pulse Blast Badminton Racket ",
         "price": "4799",
-        "mrp": "3599",
+        "qty": 1,
+        "mrp": 3599,
         "discount": 0
       },
       {
@@ -20,7 +22,8 @@
         "title": "Babolat X Feel Origin Lite Badminton Racket",
         "desc": "Babolat X Feel Origin Lite Badminton Racket ",
         "price": "8,899",
-        "mrp": "5799",
+        "qty": 1,
+        "mrp": 5799,
         "discount": 0
       },
       {
@@ -28,7 +31,8 @@
         "title": "Babolat X Feel Origin Power Badminton Racket",
         "desc": "Babolat X Feel Origin Power Badminton Racket ",
         "price": "8,899",
-        "mrp": "5799",
+        "qty": 1,
+        "mrp": 5799,
         "discount": 0
       },
       {
@@ -36,7 +40,8 @@
         "title": "Babolat I Pulse Lite Badminton Racket",
         "desc": "Babolat I Pulse Lite Badminton Racket ",
         "price": "3,999",
-        "mrp": "2999",
+        "qty": 1,
+        "mrp": 2999,
         "discount": 0
       },
       {
@@ -44,7 +49,8 @@
         "title": "Carlton Nanopulse 66 Badminton String (White)",
         "desc": "Carlton Nanopulse 66 Badminton String (White) ",
         "price": "500",
-        "mrp": "299",
+        "qty": 1,
+        "mrp": 299,
         "discount": "40% off"
       },
       {
@@ -52,7 +58,8 @@
         "title": "Carlton Nanopulse 66 Badminton String (Navy Blue)",
         "desc": "Carlton Nanopulse 66 Badminton String (Navy Blue) ",
         "price": "500",
-        "mrp": "299",
+        "qty": 1,
+        "mrp": 299,
         "discount": "40% off"
       },
       {
@@ -60,7 +67,8 @@
         "title": "Carlton Nanopulse 66 Badminton String (Black)",
         "desc": "Carlton Nanopulse 66 Badminton String (Black) ",
         "price": "500",
-        "mrp": "299",
+        "qty": 1,
+        "mrp": 299,
         "discount": "40% off"
       },
       {
@@ -68,7 +76,8 @@
         "title": "Carlton Nanopulse 66 Badminton String (Dark Red)",
         "desc": "Carlton Nanopulse 66 Badminton String (Dark Red) ",
         "price": "500",
-        "mrp": "299",
+        "qty": 1,
+        "mrp": 299,
         "discount": "40% off"
       },
       {
@@ -76,7 +85,8 @@
         "title": "Carlton Nanopulse 66 Badminton String (Green)",
         "desc": "Carlton Nanopulse 66 Badminton String (Green) ",
         "price": "500",
-        "mrp": "299",
+        "qty": 1,
+        "mrp": 299,
         "discount": "40% off"
       },
       {
@@ -84,7 +94,8 @@
         "title": "Head Boast 65 Badminton String",
         "desc": "Head Boast 65 Badminton String ",
         "price": "380",
-        "mrp": "275",
+        "qty": 1,
+        "mrp": 275,
         "discount": "28% off"
       },
         
@@ -93,7 +104,8 @@
           "desc": "Nike Zoom Devosion Basketball Shoes (Black/Silver/Volt) ",
           "img": "https://storage.sg.content-cdn.io/cdn-cgi/image/width=500,height=500,quality=75,format=auto,fit=cover,g=top/in-resources/b368029c-a4dd-448a-a888-58348cb1b144/Images/ProductImages/Source/NK844592-002.jpg",
           "currency": "INR ",
-          "mrp": "6495",
+          "qty": 1,
+          "mrp": 6495,
           "price": "6495",
           "discount": "0% off"
         },
@@ -102,7 +114,8 @@
           "desc": "Adidas 3 Series 2015 Basketball Shoes ",
           "img": "https://storage.sg.content-cdn.io/cdn-cgi/image/width=500,height=500,quality=75,format=auto,fit=cover,g=top/in-resources/b368029c-a4dd-448a-a888-58348cb1b144/Images/ProductImages/Source/ADBSS84964L.jpg",
           "currency": "INR ",
-          "mrp": "6999",
+          "qty": 1,
+          "mrp": 6999,
           "price": "4899",
           "discount": "30% off"
         },
@@ -111,7 +124,8 @@
           "desc": "Nike Overplay VIII Basketball Shoes ",
           "img": "https://storage.sg.content-cdn.io/cdn-cgi/image/width=500,height=500,quality=75,format=auto,fit=cover,g=top/in-resources/b368029c-a4dd-448a-a888-58348cb1b144/Images/ProductImages/Source/NK637382-107L.jpg",
           "currency": "INR ",
-          "mrp": "4495",
+          "qty": 1,
+          "mrp": 4495,
           "price": "4495",
           "discount": "0% off"
         },
@@ -120,7 +134,8 @@
           "desc": "This cool adidas Next Level Speed basketball shoes for men are dedicated to keep the defense a step behind. Featuring rich materials, TORSIONÂ® stability and the addition of a cushioned GEOFITâ„¢ ankle collar for four-plus quarters of comfort, this is a perfect boot to rule over the court. ",
           "img": "https://storage.sg.content-cdn.io/cdn-cgi/image/width=500,height=500,quality=75,format=auto,fit=cover,g=top/in-resources/b368029c-a4dd-448a-a888-58348cb1b144/Images/ProductImages/Source/ADBSS83650L.jpg",
           "currency": "INR ",
-          "mrp": "6699",
+          "qty": 1,
+          "mrp": 6699,
           "price": "4689",
           "discount": "30% off"
         },
@@ -129,7 +144,8 @@
           "desc": "Nike Air Quick Handle Basketball Shoes ",
           "img": "http://storage.sg.content-cdn.io/cdn-cgi/image/%7Bwidth%7D,%7Bheight%7D,quality=75,format=auto/in-resources/b368029c-a4dd-448a-a888-58348cb1b144/Images/ProductImages/Source/NKBBSHAQHL.jpg",
           "currency": "INR ",
-          "mrp": "4595",
+          "qty": 1,
+          "mrp": 4595,
           "price": "4365",
           "discount": "5% off"
         },
@@ -138,7 +154,8 @@
           "desc": "Nike Prime Hype DF Basketball Shoes ",
           "img": "https://m.media-amazon.com/images/I/71R965a6Q6L._UL1500_.jpg",
           "currency": "INR ",
-          "mrp": "6495",
+          "qty": 1,
+          "mrp": 6495,
           "price": "6495",
           "discount": "0% off"
         },
@@ -147,7 +164,8 @@
           "desc": "Nike Air Visi Pro VI Basketball Shoes ",
           "img": "https://m.media-amazon.com/images/I/71KF0mmP10L._UX695_.jpg",
           "currency": "INR ",
-          "mrp": "5795",
+          "qty": 1,
+          "mrp": 5795,
           "price": "5795",
           "discount": "0% off"
         },
@@ -156,7 +174,8 @@
           "desc": "Adidas D Lillard Basketball Shoes ",
           "img": "https://assets.adidas.com/images/w_383,h_383,f_auto,q_auto,fl_lossy,c_fill,g_auto/2c8d7d129b4148adbaf0adf2004ad1c3_9366/dame-8-shoes.jpg",
           "currency": "INR ",
-          "mrp": "9999",
+          "qty": 1,
+          "mrp": 9999,
           "price": "6999",
           "discount": "30% off"
         },
@@ -165,7 +184,8 @@
           "desc": "Adidas Isolation 2 Basketball Shoes (Grey/White) ",
           "img": "https://m.media-amazon.com/images/I/71L2yV6ilcL._AC_UL1500_.jpg",
           "currency": "INR ",
-          "mrp": "4999",
+          "qty": 1,
+          "mrp": 4999,
           "price": "3499",
           "discount": "30% off"
         },
@@ -174,7 +194,8 @@
           "desc": "Nike AIR Overplay IX Basketball Shoes (Black/White/Dark Grey) ",
           "img": "https://m.media-amazon.com/images/I/81G8+k0UrZL._UL1500_.jpg",
           "currency": "INR ",
-          "mrp": "4995",
+          "qty": 1,
+          "mrp": 4995,
           "price": "4995",
           "discount": "0% off"
         },
@@ -183,7 +204,8 @@
           "desc": "Nike Essential Ball Pump (Volt/Black) ",
           "img": "https://storage.sg.content-cdn.io/cdn-cgi/image/width=500,height=500,quality=75,format=auto,fit=cover,g=top/in-resources/b368029c-a4dd-448a-a888-58348cb1b144/Images/ProductImages/Source/NKAC4354-753.jpg",
           "currency": "INR ",
-          "mrp": "950",
+          "qty": 1,
+          "mrp": 950,
           "price": "950",
           "discount": "0% off"
         },
@@ -192,7 +214,8 @@
           "desc": "Nike Essential Ball Pump (Black/White) ",
           "img": "https://storage.sg.content-cdn.io/cdn-cgi/image/width=500,height=500,quality=75,format=auto,fit=cover,g=top/in-resources/b368029c-a4dd-448a-a888-58348cb1b144/Images/ProductImages/Source/NKAC4354-027.jpg",
           "currency": "INR ",
-          "mrp": "950",
+          "qty": 1,
+          "mrp": 950,
           "price": "950",
           "discount": "0% off"
         },
@@ -201,7 +224,8 @@
           "desc": "Stag Solid Steel Basketball Ring (18 mm) ",
           "img": "https://storage.sg.content-cdn.io/cdn-cgi/image/width=500,height=500,quality=75,format=auto,fit=cover,g=top/in-resources/b368029c-a4dd-448a-a888-58348cb1b144/Images/ProductImages/Source/STABBRSS18.jpg",
           "currency": "INR ",
-          "mrp": "1500",
+          "qty": 1,
+          "mrp": 1500,
           "price": "1350",
           "discount": "10% off"
         },
@@ -210,7 +234,8 @@
           "desc": "Stag Hobby Solid Steel Basketball Ring (9mm) ",
           "img": "https://storage.sg.content-cdn.io/cdn-cgi/image/width=500,height=500,quality=75,format=auto,fit=cover,g=top/in-resources/b368029c-a4dd-448a-a888-58348cb1b144/Images/ProductImages/Source/STABBRHB9.jpg",
           "currency": "INR ",
-          "mrp": "750",
+          "qty": 1,
+          "mrp": 750,
           "price": "750",
           "discount": "0% off"
         },
@@ -219,7 +244,8 @@
           "desc": "The most convenient and effective basketball return system available gives players the ability to practice shooting repetitively from anywhere on the courtâ€”without chasing a ball. Return netting provides optimal height and flexible position for perfect ball returns to stay in rhythm. Like having your own rebounder, even for baseline shots. ",
           "img": "https://storage.sg.content-cdn.io/cdn-cgi/image/width=500,height=500,quality=75,format=auto,fit=cover,g=top/in-resources/b368029c-a4dd-448a-a888-58348cb1b144/Images/ProductImages/Source/SZBBRF000.jpg",
           "currency": "INR ",
-          "mrp": "13999",
+          "qty": 1,
+          "mrp": 1399,
           "price": "11199",
           "discount": "20% off"
         },
@@ -228,7 +254,8 @@
           "desc": "The Rain-Maker basketball shot trainer improves shooting accuracy and confidence by turning an 18â€ rim into a 15â€ rim. The tighter target forces the shooter to find the center of the hoop and find the perfect the arc on their shot. Includes a detachable â€œrejectorâ€ to allow for rebounding practice. ",
           "img": "https://storage.sg.content-cdn.io/cdn-cgi/image/width=500,height=500,quality=75,format=auto,fit=cover,g=top/in-resources/b368029c-a4dd-448a-a888-58348cb1b144/Images/ProductImages/Source/SZBBRM00002.jpg",
           "currency": "INR ",
-          "mrp": "3099",
+          "qty": 1,
+          "mrp": 3099,
           "price": "2479",
           "discount": "20% off"
         },
@@ -237,7 +264,8 @@
           "desc": "Stag Double Spring Basketball Ring With Net ",
           "img": "https://rukminim2.flixcart.com/image/832/832/jgy0fbk0/basketball-ring/h/v/3/4009-stag-original-imaf52tyzghtkff6.jpeg?q=70",
           "currency": "INR ",
-          "mrp": "3200",
+          "qty": 1,
+          "mrp": 3200,
           "price": "2880",
           "discount": "10% off"
         },
@@ -246,7 +274,8 @@
           "desc": "Stag Solid Steel Basketball Ring (20 mm) ",
           "img": "https://storage.sg.content-cdn.io/cdn-cgi/image/width=780,height=780,quality=75,format=auto/in-resources/b368029c-a4dd-448a-a888-58348cb1b144/Images/ProductImages/Source/STABBRSS20.jpg",
           "currency": "INR ",
-          "mrp": "2400",
+          "qty": 1,
+          "mrp": 2400,
           "price": "2160",
           "discount": "10% off"
         },
@@ -255,7 +284,8 @@
         "title": "YONEX BG 80 Badminton String",
         "desc": "\nBG80 : For Speed & Smash!\nThe combination of Yonex original high-intensity nylon multifilament and high-modulus Vectran provides a solid feeling and powerful smash. For hard hitting players. ",
         "price": "565",
-        "mrp": "415",
+        "qty": 1,
+        "mrp": 415,
         "discount": "27% off"
       },
       {
@@ -263,7 +293,8 @@
         "title": "YONEX BG 85 Badminton String",
         "desc": "This 0.67mm gauge string made from an advanced high-modulus Vectran fibre and multi braided outer generates great repulsion power with a sharp touch. ",
         "price": "600",
-        "mrp": "425",
+        "qty": 1,
+        "mrp": 425,
         "discount": "29% off"
       },
       {
@@ -271,7 +302,8 @@
         "title": "YONEX Nanogy 99 Badminton String",
         "desc": "\nNANOGY 99 String: Yonex original rough braided fibre and a special nylon coating provide maximum bite on the shuttle for enhanced hairpin net shots and cuts. .\nDesigned for control players with a technical style ",
         "price": "790",
-        "mrp": "600",
+        "qty": 1,
+        "mrp": 600,
         "discount": "24% off"
       },
       {
@@ -279,7 +311,8 @@
         "title": "YONEX Nanogy 98 Badminton String",
         "desc": "\nNANOGY 98 : Comparable Repulsion to Thinner Strings! Fusion of Nanoscience and High Intensity Multifilament Nylon ",
         "price": "640",
-        "mrp": "500",
+        "qty": 1,
+        "mrp": 500,
         "discount": "22% off"
       },
       {
@@ -287,7 +320,8 @@
         "title": "Babolat I Pulse Essential Badminton Racket",
         "desc": "Babolat I Pulse Essential Badminton Racket ",
         "price": "4,399",
-        "mrp": "3299",
+        "qty": 1,
+        "mrp": 3299,
         "discount": 0
       },
       {
@@ -295,7 +329,8 @@
         "title": "Babolat Prime Blast Badminton Racket",
         "desc": "Babolat Prime Blast Badminton Racket ",
         "price": "3,599",
-        "mrp": "2699",
+        "qty": 1,
+        "mrp": 2699,
         "discount": 0
       },
       {
@@ -303,7 +338,8 @@
         "title": "Babolat Prime Lite Badminton Racket",
         "desc": "Babolat Prime Lite Badminton Racket ",
         "price": "2,999",
-        "mrp": "2249",
+        "qty": 1,
+        "mrp": 2249,
         "discount": 0
       },
       {
@@ -311,7 +347,8 @@
         "title": "Babolat Prime Power Badminton Racket",
         "desc": "Babolat Prime Power Badminton Racket ",
         "price": "3,399",
-        "mrp": "2549",
+        "qty": 1,
+        "mrp": 2549,
         "discount": 0
       },
       {
@@ -319,7 +356,8 @@
         "title": "Babolat Prime Essential Badminton Racket",
         "desc": "Babolat Prime Essential Badminton Racket ",
         "price": "3,199",
-        "mrp": "2399",
+        "qty": 1,
+        "mrp": 2399,
         "discount": 0
       },
       {
@@ -327,7 +365,8 @@
         "title": "Babolat First I Badminton Racket",
         "desc": "Babolat First I Badminton Racket ",
         "price": "1,799",
-        "mrp": "1349",
+        "qty": 1,
+        "mrp": 1349,
         "discount": 0
       },
       {
@@ -335,7 +374,8 @@
         "title": "Babolat First II Badminton Racket",
         "desc": "Babolat First II Badminton Racket ",
         "price": "1,799",
-        "mrp": "1349",
+        "qty": 1,
+        "mrp": 1349,
         "discount": 0
       },
       {
@@ -343,7 +383,8 @@
         "title": "Babolat Junior 2 Badminton Racket",
         "desc": "Babolat Junior 2 Badminton Racket ",
         "price": "1,399",
-        "mrp": "1049",
+        "qty": 1,
+        "mrp": 1049,
         "discount": 0
       },
       {
@@ -351,7 +392,8 @@
         "title": "Babolat Satelite Essential Badminton Racket",
         "desc": "Babolat Satelite Essential Badminton Racket ",
         "price": "10,999",
-        "mrp": "7149",
+        "qty": 1,
+        "mrp": 7149,
         "discount": 0
       },
       {
@@ -359,7 +401,8 @@
         "title": "Babolat Satelite Blast Badminton Racket",
         "desc": "Babolat Satelite Blast Badminton Racket ",
         "price": "10,999",
-        "mrp": "7149",
+        "qty": 1,
+        "mrp": 7149,
         "discount": 0
       },
       {
@@ -367,7 +410,8 @@
         "title": "Babolat X-Feel Power Badminton Racket",
         "desc": "Babolat X-Feel Power Badminton Racket ",
         "price": "12,999",
-        "mrp": "8449",
+        "qty": 1,
+        "mrp": 8449,
         "discount": 0
       },
       {
@@ -375,7 +419,8 @@
         "title": "Babolat X-Feel Blast Badminton Racket",
         "desc": "Babolat X-Feel Blast Badminton Racket ",
         "price": "12,999",
-        "mrp": "8449",
+        "qty": 1,
+        "mrp": 8449,
         "discount": 0
       },
       {
@@ -383,7 +428,8 @@
         "title": "Babolat Satelite Gravity 78 Badminton Racket",
         "desc": "Babolat Satelite Gravity 78 Badminton Racket ",
         "price": "11,999",
-        "mrp": "7799",
+        "qty": 1,
+        "mrp": 7799,
         "discount": 0
       },
       {
@@ -391,7 +437,8 @@
         "desc": "Nike Dominate 8P Basketball (Size 7, Blue/White) ",
         "img": "https://storage.sg.content-cdn.io/cdn-cgi/image/width=500,height=500,quality=75,format=auto,fit=cover,g=top/in-resources/b368029c-a4dd-448a-a888-58348cb1b144/Images/ProductImages/Source/NKBB0635-492.jpg",
         "currency": "INR ",
-        "mrp": "1295",
+        "qty": 1,
+        "mrp": 1295,
         "price": "1295",
         "discount": "0% off"
       },
@@ -400,7 +447,8 @@
         "desc": "Nike Dominate 8P Basketball (Size 7, Brown) ",
         "img": "https://storage.sg.content-cdn.io/cdn-cgi/image/width=500,height=500,quality=75,format=auto,fit=cover,g=top/in-resources/b368029c-a4dd-448a-a888-58348cb1b144/Images/ProductImages/Source/NKBB0635S8-847.jpg",
         "currency": "INR ",
-        "mrp": "1295",
+        "qty": 1,
+        "mrp": 1295,
         "price": "1295",
         "discount": "0% off"
       },
@@ -409,7 +457,8 @@
         "desc": "Spalding TF-250 Basketball (Brick, Size 7) ",
         "img": "https://storage.sg.content-cdn.io/cdn-cgi/image/width=500,height=500,quality=75,format=auto,fit=cover,g=top/in-resources/b368029c-a4dd-448a-a888-58348cb1b144/Images/ProductImages/Source/SPBB74531Z.jpg",
         "currency": "INR ",
-        "mrp": "2179",
+        "qty": 1,
+        "mrp": 2179,
         "price": "1749",
         "discount": "20% off"
       },
@@ -418,7 +467,8 @@
         "desc": "Spalding NBA Cross Over Basketball (Yellow/Blue, Size 7) ",
         "img": "https://storage.sg.content-cdn.io/cdn-cgi/image/width=500,height=500,quality=75,format=auto,fit=cover,g=top/in-resources/b368029c-a4dd-448a-a888-58348cb1b144/Images/ProductImages/Source/SPBB73914Z.jpg",
         "currency": "INR ",
-        "mrp": "1229",
+        "qty": 1,
+        "mrp": 1229,
         "price": "975",
         "discount": "21% off"
       },
@@ -427,7 +477,8 @@
         "desc": "Spalding NBA Alley Oop Basketball (Black, Size 7) ",
         "img": "https://storage.sg.content-cdn.io/cdn-cgi/image/width=500,height=500,quality=75,format=auto,fit=cover,g=top/in-resources/b368029c-a4dd-448a-a888-58348cb1b144/Images/ProductImages/Source/SPBB83189Z.jpg",
         "currency": "INR ",
-        "mrp": "1279",
+        "qty": 1,
+        "mrp": 1279,
         "price": "1025",
         "discount": "20% off"
       },
@@ -436,7 +487,8 @@
         "desc": "Spalding Los Angeles Lakers Baketball (Purple/Yellow, Size 7) ",
         "img": "https://storage.sg.content-cdn.io/cdn-cgi/image/width=500,height=500,quality=75,format=auto,fit=cover,g=top/in-resources/b368029c-a4dd-448a-a888-58348cb1b144/Images/ProductImages/Source/SPBB83510Z.jpg",
         "currency": "INR ",
-        "mrp": "1399",
+        "qty": 1,
+        "mrp": 1399,
         "price": "1125",
         "discount": "20% off"
       },
@@ -445,7 +497,8 @@
         "desc": "Spalding TF-250 Basketball (Brick, Size 6) ",
         "img": "https://storage.sg.content-cdn.io/cdn-cgi/image/width=500,height=500,quality=75,format=auto,fit=cover,g=top/in-resources/b368029c-a4dd-448a-a888-58348cb1b144/Images/ProductImages/Source/SPBB74532Z.jpg",
         "currency": "INR ",
-        "mrp": "2099",
+        "qty": 1,
+        "mrp": 2099,
         "price": "1675",
         "discount": "20% off"
       },
@@ -454,7 +507,8 @@
         "desc": "Spalding NBA Trend Series Digital Basketball (Blue/Orange, Size7) ",
         "img": "https://storage.sg.content-cdn.io/cdn-cgi/image/width=500,height=500,quality=75,format=auto,fit=cover,g=top/in-resources/b368029c-a4dd-448a-a888-58348cb1b144/Images/ProductImages/Source/SPBB83648Z.jpg",
         "currency": "INR ",
-        "mrp": "1299",
+        "qty": 1,
+        "mrp": 1299,
         "price": "1049",
         "discount": "19% off"
       },
@@ -463,7 +517,8 @@
         "desc": "Spalding James Harden Basketball (Red/Light Grey, Size 7) ",
         "img": "https://storage.sg.content-cdn.io/cdn-cgi/image/width=500,height=500,quality=75,format=auto,fit=cover,g=top/in-resources/b368029c-a4dd-448a-a888-58348cb1b144/Images/ProductImages/Source/SPBB83347Z.jpg",
         "currency": "INR ",
-        "mrp": "1549",
+        "qty": 1,
+        "mrp": 1549,
         "price": "1249",
         "discount": "19% off"
       },
@@ -472,7 +527,8 @@
         "desc": "Spalding Kevin Durant NBA Basketball (Yellow/Blue/White, Size 7) ",
         "img": "https://storage.sg.content-cdn.io/cdn-cgi/image/width=500,height=500,quality=75,format=auto,fit=cover,g=top/in-resources/b368029c-a4dd-448a-a888-58348cb1b144/Images/ProductImages/Source/SPBB83570Z.jpg",
         "currency": "INR ",
-        "mrp": "1549",
+        "qty": 1,
+        "mrp": 1549,
         "price": "1249",
         "discount": "19% off"
       },
@@ -481,7 +537,8 @@
         "desc": "Spalding Highlight Basketball (Blue/Orange, Size 7) ",
         "img": "https://storage.sg.content-cdn.io/cdn-cgi/image/width=500,height=500,quality=75,format=auto,fit=cover,g=top/in-resources/b368029c-a4dd-448a-a888-58348cb1b144/Images/ProductImages/Source/SPBB83496Z.jpg",
         "currency": "INR ",
-        "mrp": "1629",
+        "qty": 1,
+        "mrp": 1629,
         "price": "1299",
         "discount": "20% off"
       },
@@ -490,7 +547,8 @@
         "desc": "Spalding Stephen Curry Player Basketball (Yellow/Blue, Size 7) ",
         "img": "https://storage.sg.content-cdn.io/cdn-cgi/image/width=500,height=500,quality=75,format=auto,fit=cover,g=top/in-resources/b368029c-a4dd-448a-a888-58348cb1b144/Images/ProductImages/Source/SPBB83343Z.jpg",
         "currency": "INR ",
-        "mrp": "1549",
+        "qty": 1,
+        "mrp": 1549,
         "price": "1249",
         "discount": "19% off"
       },
@@ -499,7 +557,8 @@
         "title": "Babolat Satelite Gravity 74 Badminton Racket",
         "desc": "Babolat Satelite Gravity 74 Badminton Racket ",
         "price": "11,999",
-        "mrp": "7799",
+        "qty": 1,
+        "mrp": 7799,
         "discount": 0
       },
       {
@@ -507,7 +566,8 @@
         "title": "Yonex Voltric 0.5 DG Slim Badminton Racket (Strung, Black...",
         "desc": "Yonex Voltric 0.5 DG Slim Badminton Racket (Strung, Black/Grey) ",
         "price": "3,850",
-        "mrp": "2499",
+        "qty": 1,
+        "mrp": 2499,
         "discount": 0
       },
       {
@@ -515,7 +575,8 @@
         "title": "Yonex Voltric 0.7 DG Slim Badminton Racket (Strung, Black...",
         "desc": "Yonex Voltric 0.7 DG Slim Badminton Racket (Strung, Black/Red) ",
         "price": "4,200",
-        "mrp": "2699",
+        "qty": 1,
+        "mrp": 2699,
         "discount": 0
       },
       {
@@ -523,7 +584,8 @@
         "title": "Karakal M-70 Fast Fibre Superlite Badminton Racquet (Grey...",
         "desc": "Karakal M-70 Fast Fibre Superlite Badminton Racquet (Grey/Orange, Unstrung) ",
         "price": "9,390",
-        "mrp": "6099",
+        "qty": 1,
+        "mrp": 6099,
         "discount": 0
       },
       {
@@ -531,7 +593,8 @@
         "title": "Karakal M-75 Fast Fibre Superlite Badminton Racquet (Grey...",
         "desc": "Karakal M-75 Fast Fibre Superlite Badminton Racquet (Grey/Blue, Strung) ",
         "price": "8,990",
-        "mrp": "5949",
+        "qty": 1,
+        "mrp": 5949,
         "discount": 0
       },
       {
@@ -539,7 +602,8 @@
         "title": "Karakal S-70 Fast Fibre Superlite Badminton Racquet (Whit...",
         "desc": "Karakal S-70 Fast Fibre Superlite Badminton Racquet (White/Red, Unstrung) ",
         "price": "9,390",
-        "mrp": "6099",
+        "qty": 1,
+        "mrp": 6099,
         "discount": 0
       },
       {
@@ -547,7 +611,8 @@
         "title": "Karakal B-65 Fast Fibre Superlite Badminton Racquet (Whit...",
         "desc": "Karakal B-65 Fast Fibre Superlite Badminton Racquet (White/Pink, Unstrung) ",
         "price": "9,790",
-        "mrp": "6399",
+        "qty": 1,
+        "mrp": 6399,
         "discount": 0
       },
       {
@@ -555,7 +620,8 @@
         "title": "Head Airflow 1000 Badminton Racket (Turquoise, Unstrung)",
         "desc": "Head Airflow 1000 Badminton Racket (Turquoise, Unstrung) ",
         "price": "3,999",
-        "mrp": "2399",
+        "qty": 1,
+        "mrp": 2399,
         "discount": 0
       },
       {
@@ -563,7 +629,8 @@
         "title": "Head Falcon Attack Badminton Racket (Light Green, Unstrung)",
         "desc": "Head Falcon Attack Badminton Racket (Light Green, Unstrung) ",
         "price": "3,399",
-        "mrp": "2199",
+        "qty": 1,
+        "mrp": 2199,
         "discount": 0
       },
       {
@@ -571,7 +638,8 @@
         "title": "Yonex Astrox 39 Badminton Racquet (Strung, Black/Orange)",
         "desc": "Yonex Astrox 39 Badminton Racquet (Strung, Black/Orange) ",
         "price": "3,990",
-        "mrp": "2799",
+        "qty": 1,
+        "mrp": 2799,
         "discount": 0
       }
 ]

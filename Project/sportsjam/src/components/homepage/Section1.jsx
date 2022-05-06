@@ -1,7 +1,12 @@
 import React from "react";
 import Styles from "./Section1.module.css";
+import { Link, useNavigate } from 'react-router-dom'
+
 
 const Section1 = () => {
+
+  const navigate=useNavigate();
+
   return (
     <div className={Styles.sec1}>
 
@@ -15,8 +20,8 @@ const Section1 = () => {
             <div className={`${Styles.contentdetails} ${Styles.fadeInbottom}`}>
               <h2 className={Styles.contenttitle}>SPORTS</h2>
               <h4 className={Styles.contenttext}>A huge collection of running shoes and sports equipments.</h4>
-              {/* add routing here */}
-              <div className={Styles.btn}>BADMINTON</div>
+              {/* product routing */}
+              <div className={Styles.btn} onClick={()=>navigate("/products")}>BADMINTON</div>
               <div className={Styles.btn}>FOOTBALL</div>
               <div className={Styles.btn}>TENNIS</div>
             </div>
