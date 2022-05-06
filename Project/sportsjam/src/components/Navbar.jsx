@@ -41,6 +41,10 @@ const Navbar = () => {
                 </SearchBar>
                 <Cart>
                     <span className="iconify" data-icon="entypo:shopping-cart" data-width="50" data-height="50"></span>
+                    <div className={Styles.cartcount}>
+                        {/* show cart count here */}
+                        <h2>0</h2>
+                    </div>
                     <Link to="/cart" className={Styles.cart}>Shopping Cart</Link>
                 </Cart>
             </Nav2>
