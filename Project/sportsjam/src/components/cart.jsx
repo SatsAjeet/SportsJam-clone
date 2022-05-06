@@ -22,6 +22,7 @@ const ProductName = styled.th`
   width: 60%;
   border: 1px solid gray;
   background-color: whitesmoke;
+  border-collapse: collapse;
   padding: 5px;
 `;
 const Th = styled.th`
@@ -40,11 +41,15 @@ const Td1 = styled.td`
   display: flex;
   padding: 7px;
 `;
+const Tr = styled.tr`
+  background-color: black;
+`;
 const Img = styled.img`
   width: 100px;
   height: 100px;
   padding: 7px;
   border: 1px solid gray;
+  margin-right: 7px;
 `;
 const Cross = styled.img`
 width: 30px;
@@ -71,45 +76,56 @@ const Quantity = styled.div`
 const Cart = () => {
   const store = useSelector((state) => state);
   const data = store.cartdata
-  //console.log(data)
   const navigate = useNavigate();
   const dispatch = useDispatch();
 
   const handleDelete = (id) => {
     dispatch(delete_cart_data(id))
     localStorage.setItem("cartdata", JSON.stringify(data));
+    call();
   }
   React.useEffect(() => {
     //localStorage.setItem('cartdata', JSON.stringify(cartdatavalue))
     let data = JSON.parse(localStorage.getItem('cartdata'));
     dispatch(cart_data(data))
+    call();
   }, [])
   const handleDecrease = (item) => {
     if (item.qty == 1) {
       dispatch(delete_cart_data(item.id));
       console.log(data)
-       localStorage.setItem("cartdata", JSON.stringify(data));
+      localStorage.setItem("cartdata", JSON.stringify(data));
+      call();
     } else {
       dispatch(decrease_qty(item.id));
       localStorage.setItem("cartdata", JSON.stringify(data));
+      call();
     }
   }
   const handleIncrease = (item) => {
     dispatch(increase_qty(item.id));
     localStorage.setItem("cartdata", JSON.stringify(data));
+    call()
+  }
+  const [value, setValue] = React.useState(100)
+  const call = () => {
+    var subTotal = data.reduce(function (acc, elem) {
+      return acc + elem.mrp * elem.qty;
+    }, 0);
+    setValue(subTotal);
   }
   return (
     <>
       <Div>Shopping Cart</Div>
       <Table>
         <thead>
-          <tr>
+          <Tr>
             <ProductName>Product Name</ProductName>
             <Th>Unit Price</Th>
             <Th>Quantity</Th>
             <Th>Total</Th>
             <Th>Remove</Th>
-          </tr>
+          </Tr>
         </thead>
         <tbody>
           {data.map((item) => {
@@ -118,16 +134,26 @@ const Cart = () => {
                 <tr>
                   <Td1>
                     <Img src={item.img} alt={item.img} />
-                    <p>{item.desc}</p>
+                    <div>
+                      <p>{item.desc}</p>
+                      <br />
+                      <p
+                        style={{
+                          textDecoration: "underline",
+                          cursor: "pointer",
+                        }}
+                        onClick={() => navigate("/description")}
+                      >
+                        View Details
+                      </p>
+                    </div>
                   </Td1>
                   <Td>₹{item.mrp}</Td>
                   <Td>
                     <div style={{ display: "flex", textAlign: "center" }}>
-                      <Button
-                        onClick={() => handleDecrease(item)}>-</Button>
+                      <Button onClick={() => handleDecrease(item)}>-</Button>
                       <Quantity>{item.qty}</Quantity>
-                      <Button
-                        onClick={() => handleIncrease(item)}>+</Button>
+                      <Button onClick={() => handleIncrease(item)}>+</Button>
                     </div>
                   </Td>
                   <Td>₹{item.mrp * item.qty}</Td>
@@ -173,6 +199,25 @@ const Cart = () => {
         >
           PROCEED TO PAY
         </button>
+      </div>
+      <div>
+        <h2>Order Summary</h2>
+        <table>
+          <tbody>
+            <tr>
+              <td>Cart Sub Total</td>
+              <td>{value}</td>
+            </tr>
+            <tr>
+              <td>GST 12%</td>
+              <td>{Math.floor(value*0.12)}</td>
+            </tr>
+            <tr>
+              <td>Total Cart Amount</td>
+              <td>{value+Math.floor(value*0.12)}</td>
+            </tr>
+          </tbody>
+        </table>
       </div>
     </>
   );
