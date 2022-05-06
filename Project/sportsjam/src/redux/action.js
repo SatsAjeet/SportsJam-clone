@@ -16,12 +16,6 @@ export const description_data = (dispatch,payload)=>{
     })
 }
 
-export const cart_data = (payload) => {
-    return{
-        type: CART_DATA,
-        payload
-    }
-}
 export const delete_cart_data = (payload) => {
     return {
         type: DELETE_CART_DATA,
@@ -37,6 +31,12 @@ export const increase_qty = (payload) => {
 export const decrease_qty = (payload) => {
     return {
         type: DECREASE_QTY,
+        payload
+    }
+}
+export const cart_data = (payload) => {
+    return {
+        type: CART_DATA,
         payload
     }
 }

@@ -4,6 +4,8 @@ import styled from "styled-components"
 import {cart_data,increase_qty,decrease_qty,delete_cart_data} from "../redux/action"
 import { useSelector, useDispatch } from 'react-redux'
 import { useNavigate } from "react-router-dom";
+import cartdatavalue from "../cartdata.json";
+
 
 const Div = styled.div`
   padding: 10px;
@@ -42,12 +44,15 @@ const Img = styled.img`
   width: 100px;
   height: 100px;
   padding: 7px;
+  border: 1px solid gray;
 `;
 const Cross = styled.img`
 width: 30px;
 height: 30px;
 padding: 7px;
-cursor : pointer`
+cursor : pointer;
+border: 3px solid red;
+`
 const Button = styled.button`
 width: 30px;
 height: 30px;
@@ -65,15 +70,12 @@ const Cart = () => {
   const navigate = useNavigate();
   const dispatch = useDispatch();
 
-
-  const handleclick = (desc) => {
-    dispatch(delete_cart_data(desc))
+  const handleDelete = (id) => {
+    dispatch(delete_cart_data(id))
   }
-
   React.useEffect(() => {
-      dispatch(cart_data());
-    },
-    [dispatch]);
+    dispatch(cart_data(cartdatavalue))
+  }, [])
   return (
     <>
       <Div>Shopping Cart</Div>
@@ -109,7 +111,7 @@ const Cart = () => {
                   <Td>₹{item.price * item.qty}</Td>
                   <Td>
                     <Cross
-                      onClick={() => handleclick(item.desc)}
+                      onClick={() => handleDelete(item.id)}
                       src="https://thumbs.dreamstime.com/z/red-cross-symbol-icon-as-delete-remove-fail-failure-incorr-incorrect-answer-89999776.jpg"
                       alt="remove"
                     />
