@@ -1,5 +1,5 @@
-import React, { useEffect } from "react";
-import { Route, Routes, useNavigate } from "react-router-dom";
+import React from "react";
+import { Route, Routes} from "react-router-dom";
 import CreateAccount from "../components/CreateAccount";
 import Homepage from "../components/Homepage";
 import Navbar from "../components/Navbar";
@@ -8,16 +8,9 @@ import SignIn from "../components/SignIn";
 import WishList from "../components/WishList";
 import Product from "../components/product";
 import ProductDescription from "../components/Prodcutdescription";
-
+import Footer from "../components/Footer";
 
 const MainRoutes = () => {
-  //redirected to homepage everytime someone refresh or lands on the website
-  const navigate = useNavigate();
-
-  useEffect(() => {
-    navigate("/home");
-  }, []);
-
   return (
     <div>
       <Navbar />
@@ -28,9 +21,11 @@ const MainRoutes = () => {
         <Route path="createaccount" element={<CreateAccount />} />
         <Route path="wishlist" element={<WishList />} />
         <Route path="cart" element={<Cart />} />
-        <Route path="/products" element={<Product/>}/>
-        <Route path="/description" element={<ProductDescription/>}/>
+        <Route path="products" element={<Product />} />
+        <Route path="description" element={<ProductDescription />} />
       </Routes>
+
+      <Footer/>
     </div>
   );
 };
