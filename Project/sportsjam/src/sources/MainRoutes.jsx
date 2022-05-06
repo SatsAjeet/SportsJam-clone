@@ -16,6 +16,7 @@ const MainRoutes = () => {
       <Navbar />
 
       <Routes>
+        <Route path="/" element={<Homepage/>}/>
         <Route path="home" element={<Homepage />} />
         <Route path="signin" element={<SignIn />} />
         <Route path="createaccount" element={<CreateAccount />} />
