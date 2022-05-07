@@ -2,7 +2,7 @@ import React from "react";
 //import "./PDetails.css"
 import styles from "./Details.module.css"
 import { useSelector } from "react-redux";
-import {useNavigate} from "react-router-dom"
+import { useNavigate } from "react-router-dom"
 
 const Details = () => {
     const navigate = useNavigate()
@@ -30,7 +30,7 @@ const Details = () => {
         navigate("/cart")
     }
     
-    return (
+    return (<>
         <div>
            <div className= {styles.mainDetails}>
                 <div className="card-image">
@@ -69,6 +69,7 @@ const Details = () => {
                  </div>
             </div>
         </div>
+        </>
         
     )
 }
