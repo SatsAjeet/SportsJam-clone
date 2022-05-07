@@ -1,6 +1,6 @@
 import { SORT_DATA } from "./actiontypes";
 import { DESCRIPTION_DATA } from "./actiontypes";
-import { CART_DATA, DELETE_CART_DATA,INCREASE_QTY,DECREASE_QTY, } from "./actiontypes";
+import { CART_DATA, DELETE_CART_DATA,INCREASE_QTY,DECREASE_QTY, SET_COUNT} from "./actiontypes";
 
 export const sorted_data= (dispatch,payload)=>{
     dispatch({
@@ -37,6 +37,12 @@ export const decrease_qty = (payload) => {
 export const cart_data = (payload) => {
     return {
         type: CART_DATA,
+        payload
+    }
+}
+export const setCount = (payload) => {
+    return {
+        type: SET_COUNT,
         payload
     }
 }

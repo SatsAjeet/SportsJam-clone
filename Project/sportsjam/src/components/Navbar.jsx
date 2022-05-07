@@ -3,14 +3,23 @@ import { Cart, Nav1, Nav1Flex, Nav2, Nav3, SearchBar } from './Navbar.styles'
 import { Link, useNavigate } from 'react-router-dom'
 import Styles from "./Navbar.module.css";
 import NavDropDown from './NavDropDown';
-import {useSelector} from "react-redux";
+import { useSelector, useDispatch } from "react-redux";
+import {setCount} from "../redux/action"
 
 
 const Navbar = () => {
 
     const navigate = useNavigate();
     const store = useSelector((state) => state)
-    const count= store.count
+    const count = store.count
+    const dispatch = useDispatch()
+
+    React.useEffect(() => {
+        const count = JSON.parse(localStorage.getItem("cartdata")) || 0;
+        if (count != 0) {
+            dispatch(setCount(count.length))
+        }
+    },[])
 
   return (
     <div>

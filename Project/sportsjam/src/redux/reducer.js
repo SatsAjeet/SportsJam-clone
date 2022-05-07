@@ -1,10 +1,10 @@
 import products from "../products.json";
-import { DESCRIPTION_DATA, SORT_DATA, CART_DATA, DELETE_CART_DATA,INCREASE_QTY,DECREASE_QTY } from "./actiontypes";
+import { DESCRIPTION_DATA, SORT_DATA, CART_DATA, DELETE_CART_DATA,INCREASE_QTY,DECREASE_QTY, SET_COUNT} from "./actiontypes";
 
 const initState = {
     products: [...products],
     cartdata: [],
-    count:0
+    count: 0
 }
 
 export const dataReducer = (state = initState, { type, payload }) => {
@@ -57,6 +57,12 @@ export const dataReducer = (state = initState, { type, payload }) => {
                  })]
              }
          }
+         case SET_COUNT: {
+             return {
+                 ...state,
+                 count: payload
+             }
+             }
          default :{
              return state
          }
