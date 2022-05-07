@@ -1,7 +1,7 @@
 import React,{useState} from "react";
 import data from './data.json'
 
-import "./PDetails.css"
+//import "./PDetails.css"
 const ProductDetails = ()=>{
 
     return(

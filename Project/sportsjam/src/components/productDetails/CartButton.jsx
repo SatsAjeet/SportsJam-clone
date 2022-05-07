@@ -1,5 +1,5 @@
 import React,{useState} from "react";
-import "./PDetails.css"
+//import "./PDetails.css"
 
 const CartButton = (props) => {
       const [count, setCount] = useState(0);
