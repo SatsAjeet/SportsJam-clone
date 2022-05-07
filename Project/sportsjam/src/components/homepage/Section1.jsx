@@ -20,7 +20,7 @@ const Section1 = () => {
             <div className={`${Styles.contentdetails} ${Styles.fadeInbottom}`}>
               <h2 className={Styles.contenttitle}>SPORTS</h2>
               <h4 className={Styles.contenttext}>A huge collection of running shoes and sports equipments.</h4>
-              {/* product routing */}
+              {/* product page routing */}
               <div className={Styles.btn} onClick={()=>navigate("/products")}>BADMINTON</div>
               <div className={Styles.btn}>FOOTBALL</div>
               <div className={Styles.btn}>TENNIS</div>
