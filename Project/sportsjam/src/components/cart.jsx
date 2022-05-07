@@ -1,48 +1,57 @@
-
-import React from 'react'
-import styled from "styled-components"
-import {cart_data,increase_qty,decrease_qty,delete_cart_data} from "../redux/action"
-import { useSelector, useDispatch } from 'react-redux'
+import React from "react";
+import styled from "styled-components";
+import {
+  cart_data,
+  increase_qty,
+  decrease_qty,
+  delete_cart_data,
+} from "../redux/action";
+import { useSelector, useDispatch } from "react-redux";
 import { useNavigate } from "react-router-dom";
 import cartdatavalue from "../cartdata.json";
 
-
 const Div = styled.div`
   padding: 10px;
-  background-color: #dbdbdb;
+  background-color: rgb(192, 192, 192);
   font-size: 15px;
   font-weight: 900;
-  `;
+`;
 const Table = styled.table`
-  widTh: 100%;
+  width: 100%;
   text-align: left;
   border-collapse: collapse;
+  border: 1px solid rgb(193, 193, 193);
 `;
 const ProductName = styled.th`
   width: 60%;
-  border: 1px solid gray;
-  background-color: whitesmoke;
+  border: 1px solid rgb(193, 193, 193);
+  background-color: rgb(215, 215, 215);
   border-collapse: collapse;
   padding: 5px;
 `;
 const Th = styled.th`
-  border: 1px solid gray;
-  background-color: whitesmoke;
+  border: 1px solid rgb(193, 193, 193);
+  background-color: rgb(215, 215, 215);
   padding: 5px;
 `;
 const Td = styled.td`
-  border: 1px solid gray;
+  border: 1px solid rgb(193, 193, 193);
   vertical-align: top;
   padding: 7px;
 `;
+const TD = styled.td`
+  border-top: 1px solid rgb(193, 193, 193);
+  border-bottom: 1px solid rgb(193, 193, 193);
+  vertical-align: top;
+  padding: 7px;
+  text-align: end;
+  padding-left: 400px;
+`;
 const Td1 = styled.td`
-  border-bottom: 1px solid gray;
+  border-bottom: 1px solid rgb(193, 193, 193);
   vertical-align: top;
   display: flex;
   padding: 7px;
-`;
-const Tr = styled.tr`
-  background-color: black;
 `;
 const Img = styled.img`
   width: 100px;
@@ -52,80 +61,98 @@ const Img = styled.img`
   margin-right: 7px;
 `;
 const Cross = styled.img`
-width: 30px;
-height: 30px;
-padding: 7px;
-cursor : pointer;
-border: 3px solid red;
-`
+  width: 30px;
+  height: 30px;
+  padding: 7px;
+  cursor: pointer;
+  border: 3px solid red;
+`;
 const Button = styled.button`
-width: 30px;
-height: 30px;
-font-size: 25px;
-`
+  width: 30px;
+  height: 30px;
+  font-size: 25px;
+`;
 const Quantity = styled.div`
   border: 1px solid gray;
   width: 40px;
   height: 30px;
   display: flex;
   justify-content: center;
- align-items: center;
+  align-items: center;
   font-size: 20px;
 `;
 
 const Cart = () => {
+  const [voucher, setVoucher] = React.useState("")
   const store = useSelector((state) => state);
-  const data = store.cartdata
+  const data = store.cartdata;
   const navigate = useNavigate();
   const dispatch = useDispatch();
 
   const handleDelete = (id) => {
-    dispatch(delete_cart_data(id))
+    dispatch(delete_cart_data(id));
     localStorage.setItem("cartdata", JSON.stringify(data));
+    if (data.length == 1) {
+      localStorage.removeItem("cartdata");
+    }
     call(data);
-  }
+  };
   React.useEffect(() => {
     //localStorage.setItem('cartdata', JSON.stringify(cartdatavalue))
-    let data = JSON.parse(localStorage.getItem('cartdata'));
-    dispatch(cart_data(data))
+    let data = JSON.parse(localStorage.getItem("cartdata")) || [];
+    dispatch(cart_data(data));
     call(data);
-  }, [])
+  }, []);
   const handleDecrease = (item) => {
     if (item.qty == 1) {
       dispatch(delete_cart_data(item.id));
-      console.log(data)
       localStorage.setItem("cartdata", JSON.stringify(data));
+      if (data.length == 1) {
+        localStorage.removeItem("cartdata");
+      }
       call(data);
     } else {
       dispatch(decrease_qty(item.id));
       localStorage.setItem("cartdata", JSON.stringify(data));
       call(data);
     }
-  }
+  };
   const handleIncrease = (item) => {
     dispatch(increase_qty(item.id));
     localStorage.setItem("cartdata", JSON.stringify(data));
-    call(data)
-  }
-  const [value, setValue] = React.useState(100)
+    call(data);
+  };
+  const [value, setValue] = React.useState(100);
   const call = (data) => {
     var subTotal = data.reduce(function (acc, elem) {
       return acc + elem.mrp * elem.qty;
     }, 0);
     setValue(subTotal);
+  };
+  const handleChangeVoucher = (e) => {
+    console.log(e)
+  }
+  const handleVoucher = () => {
+    if (voucher == "masai") {
+      
+    }
+    else {
+      alert("Invalid Coupon")
+    }
+    setVoucher("")
   }
   return (
     <>
       <Div>Shopping Cart</Div>
       <Table>
         <thead>
-          <Tr>
+          <tr>
             <ProductName>Product Name</ProductName>
             <Th>Unit Price</Th>
             <Th>Quantity</Th>
             <Th>Total</Th>
             <Th>Remove</Th>
-          </Tr>
+          </tr>
         </thead>
         <tbody>
           {data.map((item) => {
@@ -180,6 +207,7 @@ const Cart = () => {
             fontSize: "12px",
             borderRadius: "5px",
             cursor: "pointer",
+            marginTop: "10px",
           }}
           onClick={() => navigate("/products")}
         >
@@ -194,6 +222,7 @@ const Cart = () => {
             fontSize: "12px",
             borderRadius: "5px",
             cursor: "pointer",
+            marginTop: "10px",
           }}
           onClick={() => navigate("/payment")}
         >
@@ -201,26 +230,93 @@ const Cart = () => {
         </button>
       </div>
       <div>
-        <h2>Order Summary</h2>
-        <table>
+        <Table style={{ width: "99%", margin: "20px auto" }}>
           <tbody>
             <tr>
-              <td>Cart Sub Total</td>
-              <td>{value}</td>
+              <Td
+                style={{
+                  width: "100%",
+                  textAlign: "start",
+                  background: "rgb(215, 215, 215)",
+                  borderRight: "0px solid",
+                }}
+              >
+                <h4>Order Summary</h4>
+              </Td>
+              <TD
+                style={{
+                  background: "rgb(215, 215, 215)",
+                }}
+              ></TD>
             </tr>
             <tr>
-              <td>GST 12%</td>
-              <td>{Math.floor(value*0.12)}</td>
+              <TD>Cart Sub Total</TD>
+              <TD>₹{value}</TD>
             </tr>
             <tr>
-              <td>Total Cart Amount</td>
-              <td>{value+Math.floor(value*0.12)}</td>
+              <TD style={{ color: "gray" }}>GST 12%</TD>
+              <TD>₹{Math.floor(value * 0.12)}</TD>
+            </tr>
+            <tr>
+              <TD>Total Cart Amount</TD>
+              <TD>₹{value + Math.floor(value * 0.12)}</TD>
             </tr>
           </tbody>
-        </table>
+        </Table>
+      </div>
+      <div
+        style={{
+          display: "flex",
+          width: "40%",
+          marginTop: "20px",
+          marginLeft: "20px",
+          marginBottom: "20px",
+        }}
+      >
+        <div style={{ marginRight: "20px" }}>
+          <img
+            style={{ height: "70px", width: "150px", borderRadius: "3px" }}
+            src="https://image.shutterstock.com/image-vector/30-off-discount-label-sign-600w-2096258380.jpg"
+            alt="discount"
+          />
+          <p>Voucher Code</p>
+        </div>
+        <div>
+          <strong style={{ fontWeight: "900", color: "black" }}>
+            Use your voucher code
+          </strong>
+          <p style={{ color: "gray", fontSize: "12px" }}>
+            only one coupon code can be used per order at this time
+          </p>
+          <input
+            style={{
+              width: "300px",
+              marginBottom: "10px",
+              border: "1px solid rgb(193, 193, 193)",
+            }}
+            value={voucher}
+            type="text"
+            placeholder="Voucher Code"
+            onchange={(e)=>{handleChangeVoucher()}}
+          />
+          <br />
+          <button
+            onClick={handleVoucher}
+            style={{
+              color: "white",
+              background: "gray",
+              border: "0px",
+              fontSize: "12px",
+              padding: "5px 10px",
+              borderRadius: "3px",
+            }}
+          >
+            APPLY
+          </button>
+        </div>
       </div>
     </>
   );
-}
+};
 
-export default Cart
+export default Cart;
