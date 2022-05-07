@@ -7,8 +7,8 @@ import WishList from "../components/WishList";
 import Product from "../components/product";
 import Details from "../components/productDetails/Details";
 import Footer from "../components/Footer";
-import Signup from '../components/Authentication/Signup';
-import Signin from '../components/Authentication/Signin';
+import Signup from '../components/Signup';
+import Signin from '../components/Signin';
 
 const MainRoutes = () => {
   return (

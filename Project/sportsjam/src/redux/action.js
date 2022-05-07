@@ -1,6 +1,6 @@
 import { SORT_DATA } from "./actiontypes";
 import { DESCRIPTION_DATA } from "./actiontypes";
-import { CART_DATA, DELETE_CART_DATA,INCREASE_QTY,DECREASE_QTY, SET_COUNT} from "./actiontypes";
+import { CART_DATA, DELETE_CART_DATA,INCREASE_QTY,DECREASE_QTY, SET_COUNT, LOGIN} from "./actiontypes";
 
 export const sorted_data= (dispatch,payload)=>{
     dispatch({
@@ -46,3 +46,9 @@ export const setCount = (payload) => {
         payload
     }
 }
+export const loginaction = () => {
+    return {
+        type: LOGIN,
+    }
+}
+

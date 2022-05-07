@@ -36,7 +36,6 @@ const handleFormSubmit = (event) => {
     name: name,
     email: email,
     mobile: mobile,
-    email: email,
     password: password,
   };
   const data = JSON.parse(localStorage.getItem("registeration")) || []
