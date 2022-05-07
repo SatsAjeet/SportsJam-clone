@@ -1,6 +1,6 @@
 import React,{useState} from "react";
 import fourbox from './fourbox.json'
-import "./PDetails.css" 
+//import "./PDetails.css" 
 
 const FourBox = ()=>{
     return(

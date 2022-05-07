@@ -7,7 +7,7 @@ import Cart from "../components/cart";
 import SignIn from "../components/SignIn";
 import WishList from "../components/WishList";
 import Product from "../components/product";
-import Description from "../components/productDetails/Description";
+import Details from "../components/productDetails/Details";
 import Footer from "../components/Footer";
 
 const MainRoutes = () => {
@@ -23,7 +23,7 @@ const MainRoutes = () => {
         <Route path="wishlist" element={<WishList />} />
         <Route path="cart" element={<Cart />} />
         <Route path="products" element={<Product />} />
-        {/* <Route path="description" element={<Description />} /> */}
+        <Route path="description" element={<Details/>} />
       </Routes>
 
       <Footer/>

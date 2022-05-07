@@ -1,15 +1,15 @@
 import React,{useState} from "react";
-import data from './data.json'
-import "./PDetails.css"
+//import data from './data.json'
+//import "./PDetails.css"
 const Box= ()=>{
-
+ let data;
     return(
         <div>
        <div className="boxcontainer">
             
 
-            {data.map(item => (
-                <div key={item.id}>
+            {/* {data.map(item => ( */}
+                <div>
                     <div className="fea">FEATURES <div className="descr">DESCTIPTION</div></div>
                     <div className="spec">SPECIFICATION</div>
                   
@@ -76,7 +76,7 @@ const Box= ()=>{
 
                 <div className="login">LOGIN</div>
                   </div>
-                    ))}
+                    {/* ))} */}
                     </div>
 
         </div>
