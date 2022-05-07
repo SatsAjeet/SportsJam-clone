@@ -1,3 +1,4 @@
+
 import React from "react";
 import { Route, Routes} from "react-router-dom";
 import CreateAccount from "../components/CreateAccount";
@@ -9,6 +10,8 @@ import WishList from "../components/WishList";
 import Product from "../components/product";
 import ProductDescription from "../components/Prodcutdescription";
 import Footer from "../components/Footer";
+
+
 
 const MainRoutes = () => {
   return (
@@ -26,7 +29,10 @@ const MainRoutes = () => {
         <Route path="description" element={<ProductDescription />} />
       </Routes>
 
+ 
       <Footer/>
+
+      
     </div>
   );
 };

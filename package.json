@@ -1,4 +1,5 @@
 {
+<<<<<<< Updated upstream
   "name": "sangam",
   "version": "0.1.0",
   "private": true,
@@ -34,5 +35,13 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+=======
+  "dependencies": {
+    "install": "^0.13.0",
+    "react-redux": "^8.0.1",
+    "react-router-dom": "^6.3.0",
+    "redux": "^4.2.0",
+    "styled-components": "^5.3.5"
+>>>>>>> Stashed changes
   }
 }
