@@ -130,14 +130,16 @@ const Cart = () => {
     setValue(subTotal);
   };
   const handleChangeVoucher = (e) => {
-    console.log(e)
+    setVoucher(e.target.value);
   }
-  const handleVoucher = () => {
-    if (voucher == "masai") {
-      
+  const handleVoucher = (e) => {
+    e.preventDefault();
+    if (voucher == "masai30") {
+      const discount= Math.floor(value*0.7)
+      setValue(discount)
     }
     else {
-      alert("Invalid Coupon")
+      alert("APPLY: masai30")
     }
     setVoucher("")
   }
@@ -288,31 +290,35 @@ const Cart = () => {
           <p style={{ color: "gray", fontSize: "12px" }}>
             only one coupon code can be used per order at this time
           </p>
-          <input
-            style={{
-              width: "300px",
-              marginBottom: "10px",
-              border: "1px solid rgb(193, 193, 193)",
-            }}
-            value={voucher}
-            type="text"
-            placeholder="Voucher Code"
-            onchange={(e)=>{handleChangeVoucher()}}
-          />
-          <br />
-          <button
-            onClick={handleVoucher}
-            style={{
-              color: "white",
-              background: "gray",
-              border: "0px",
-              fontSize: "12px",
-              padding: "5px 10px",
-              borderRadius: "3px",
-            }}
-          >
-            APPLY
-          </button>
+          <form onSubmit={handleVoucher}>
+            <input
+              style={{
+                width: "300px",
+                marginBottom: "10px",
+                border: "1px solid rgb(193, 193, 193)",
+              }}
+              value={voucher}
+              type="text"
+              placeholder="Voucher Code"
+              onChange={(e) => {
+                handleChangeVoucher(e);
+              }}
+            />
+            <br />
+            <button
+              type="submit"
+              style={{
+                color: "white",
+                background: "gray",
+                border: "0px",
+                fontSize: "12px",
+                padding: "5px 10px",
+                borderRadius: "3px",
+              }}
+            >
+              APPLY
+            </button>
+          </form>
         </div>
       </div>
     </>

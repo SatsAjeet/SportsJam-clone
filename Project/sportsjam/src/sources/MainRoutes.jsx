@@ -9,6 +9,7 @@ import Details from "../components/productDetails/Details";
 import Footer from "../components/Footer";
 import Signup from '../components/Signup';
 import Signin from '../components/Signin';
+import {Main} from '../components/payment/Main';
 
 const MainRoutes = () => {
   return (
@@ -23,7 +24,8 @@ const MainRoutes = () => {
         <Route path="wishlist" element={<WishList />} />
         <Route path="cart" element={<Cart />} />
         <Route path="products" element={<Product />} />
-        <Route path="description" element={<Details/>} />
+        <Route path="description" element={<Details />} />
+        <Route path="payment" element={<Main/>} />
       </Routes>
 
       <Footer/>

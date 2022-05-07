@@ -1,6 +1,5 @@
 import React,{useState} from "react";
 import CartButton from './CartButton'
-import Main from './Main.json';
 //import "./PDetails.css"
 const Main = ()=>{
 const [count, setCount] = useState(0);
