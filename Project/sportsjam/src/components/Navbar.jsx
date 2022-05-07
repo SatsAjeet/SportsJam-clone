@@ -35,7 +35,7 @@ const Navbar = () => {
             </Nav1Flex>
             <Nav1Flex>
                 <span className="iconify" data-icon="bi:person" data-width="20" data-height="20"></span>
-                <Link to="/createaccount" className={Styles.link}>Create Account</Link>
+                <Link to="/Signup" className={Styles.link}>Create Account</Link>
             </Nav1Flex>
             <Nav1Flex>
                 <span className="iconify" data-icon="ant-design:heart-outlined" data-width="20" data-height="20"></span>

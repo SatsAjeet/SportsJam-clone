@@ -1,6 +1,7 @@
 import React, { useEffect } from "react";
 import {useNavigate} from "react-router-dom"
 const Signup = ({ submitForm }) => {
+  const navigate = useNavigate()
 const [name, setname] = React.useState("");
 const [mobile, setmobile] = React.useState("");
 const [email, setemail] = React.useState("");
@@ -46,7 +47,7 @@ const handleFormSubmit = (event) => {
   setmobile("")
   setpassword("")
   alert("Registeration Success!");
-
+  navigate("/signin")
 };
 
   return (
