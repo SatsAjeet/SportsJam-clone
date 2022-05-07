@@ -1,9 +1,13 @@
 import React from "react";
 import Styles from "./NavDropDown.module.css";
-
+import {useNavigate} from "react-router-dom"
 const NavDropDown = () => {
+  const navigate = useNavigate()
+  const handleClick = () => {
+    navigate("/products");
+  }
   return (
-    <div>
+    <div onClick={handleClick}>
       <div class={Styles.dropdown}>
         <p class={Styles.dropbtn}>SPORTS</p>
         <div class={Styles.dropdowncontent}>
