@@ -36,7 +36,7 @@ const Td = styled.td`
   padding: 7px;
 `;
 const Td1 = styled.td`
-  border: 1px solid gray;
+  border-bottom: 1px solid gray;
   vertical-align: top;
   display: flex;
   padding: 7px;
@@ -82,33 +82,33 @@ const Cart = () => {
   const handleDelete = (id) => {
     dispatch(delete_cart_data(id))
     localStorage.setItem("cartdata", JSON.stringify(data));
-    call();
+    call(data);
   }
   React.useEffect(() => {
     //localStorage.setItem('cartdata', JSON.stringify(cartdatavalue))
     let data = JSON.parse(localStorage.getItem('cartdata'));
     dispatch(cart_data(data))
-    call();
+    call(data);
   }, [])
   const handleDecrease = (item) => {
     if (item.qty == 1) {
       dispatch(delete_cart_data(item.id));
       console.log(data)
       localStorage.setItem("cartdata", JSON.stringify(data));
-      call();
+      call(data);
     } else {
       dispatch(decrease_qty(item.id));
       localStorage.setItem("cartdata", JSON.stringify(data));
-      call();
+      call(data);
     }
   }
   const handleIncrease = (item) => {
     dispatch(increase_qty(item.id));
     localStorage.setItem("cartdata", JSON.stringify(data));
-    call()
+    call(data)
   }
   const [value, setValue] = React.useState(100)
-  const call = () => {
+  const call = (data) => {
     var subTotal = data.reduce(function (acc, elem) {
       return acc + elem.mrp * elem.qty;
     }, 0);
