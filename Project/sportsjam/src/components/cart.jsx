@@ -8,7 +8,7 @@ import {
 } from "../redux/action";
 import { useSelector, useDispatch } from "react-redux";
 import { useNavigate } from "react-router-dom";
-import cartdatavalue from "../cartdata.json";
+
 
 const Div = styled.div`
   padding: 10px;
@@ -91,14 +91,14 @@ const Cart = () => {
 
   const handleDelete = (id) => {
     dispatch(delete_cart_data(id));
-    localStorage.setItem("cartdata", JSON.stringify(data));
+    const data1 = data.filter((elem) => id !== elem.id);
+    localStorage.setItem("cartdata", JSON.stringify(data1));
     if (data.length == 1) {
       localStorage.removeItem("cartdata");
     }
-    call(data);
+    call(data1);
   };
   React.useEffect(() => {
-    //localStorage.setItem('cartdata', JSON.stringify(cartdatavalue))
     let data = JSON.parse(localStorage.getItem("cartdata")) || [];
     dispatch(cart_data(data));
     call(data);
@@ -106,11 +106,12 @@ const Cart = () => {
   const handleDecrease = (item) => {
     if (item.qty == 1) {
       dispatch(delete_cart_data(item.id));
-      localStorage.setItem("cartdata", JSON.stringify(data));
+      const data1 = data.filter((elem) => item.id !== elem.id);
+      localStorage.setItem("cartdata", JSON.stringify(data1));
       if (data.length == 1) {
         localStorage.removeItem("cartdata");
       }
-      call(data);
+      call(data1);
     } else {
       dispatch(decrease_qty(item.id));
       localStorage.setItem("cartdata", JSON.stringify(data));

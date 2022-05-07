@@ -1,4 +1,4 @@
-import products from "../products.json";
+import products from "./products.json";
 import { DESCRIPTION_DATA, SORT_DATA, CART_DATA, DELETE_CART_DATA,INCREASE_QTY,DECREASE_QTY, SET_COUNT, LOGIN} from "./actiontypes";
 
 const initState = {
