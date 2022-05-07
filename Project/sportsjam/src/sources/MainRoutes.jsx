@@ -4,11 +4,11 @@ import CreateAccount from "../components/CreateAccount";
 import Homepage from "../components/Homepage";
 import Navbar from "../components/Navbar";
 import Cart from "../components/cart";
-import Form from "../components/Authentication/Form";
 import WishList from "../components/WishList";
 import Product from "../components/product";
 import Description from "../components/productDetails/Description";
 import Footer from "../components/Footer";
+import Signup from '../components/Authentication/Signup';
 
 const MainRoutes = () => {
   return (
@@ -18,7 +18,7 @@ const MainRoutes = () => {
       <Routes>
         <Route path="/" element={<Homepage/>}/>
         <Route path="home" element={<Homepage />} />
-        <Route path="signin" element={<Form />} />
+        <Route path="signup" element={<Signup />} />
         <Route path="createaccount" element={<CreateAccount />} />
         <Route path="wishlist" element={<WishList />} />
         <Route path="cart" element={<Cart />} />
