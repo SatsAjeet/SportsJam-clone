@@ -3,11 +3,14 @@ import { Cart, Nav1, Nav1Flex, Nav2, Nav3, SearchBar } from './Navbar.styles'
 import { Link, useNavigate } from 'react-router-dom'
 import Styles from "./Navbar.module.css";
 import NavDropDown from './NavDropDown';
+import {useSelector} from "react-redux";
 
 
 const Navbar = () => {
 
-    const navigate=useNavigate();
+    const navigate = useNavigate();
+    const store = useSelector((state) => state)
+    const count= store.count
 
   return (
     <div>
@@ -43,7 +46,7 @@ const Navbar = () => {
                     <span className="iconify" data-icon="entypo:shopping-cart" data-width="50" data-height="50"></span>
                     <div className={Styles.cartcount}>
                         {/* show cart count here */}
-                        <h2>0</h2>
+                        <h2>{count}</h2>
                     </div>
                     <Link to="/cart" className={Styles.cart}>Shopping Cart</Link>
                 </Cart>

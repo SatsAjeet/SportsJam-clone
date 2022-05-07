@@ -4,6 +4,7 @@ import { DESCRIPTION_DATA, SORT_DATA, CART_DATA, DELETE_CART_DATA,INCREASE_QTY,D
 const initState = {
     products: [...products],
     cartdata: [],
+    count:0
 }
 
 export const dataReducer = (state = initState, { type, payload }) => {
@@ -24,13 +25,15 @@ export const dataReducer = (state = initState, { type, payload }) => {
          case CART_DATA:{
              return {
                  ...state,
-                 cartdata: payload
+                 cartdata: payload,
+                 count: payload.length
              }
         }
          case DELETE_CART_DATA: {
              return {
                  ...state,
-                 cartdata: state.cartdata.filter((item) =>  item.id !== payload )
+                 cartdata: state.cartdata.filter((item) => item.id !== payload),
+                 count: state.count-1
              }
          }
          
