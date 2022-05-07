@@ -1,14 +1,14 @@
 import React from "react";
 import { Route, Routes} from "react-router-dom";
-import CreateAccount from "../components/CreateAccount";
 import Homepage from "../components/Homepage";
 import Navbar from "../components/Navbar";
 import Cart from "../components/cart";
-import SignIn from "../components/SignIn";
 import WishList from "../components/WishList";
 import Product from "../components/product";
 import Details from "../components/productDetails/Details";
 import Footer from "../components/Footer";
+import Signup from '../components/Authentication/Signup';
+import Signin from '../components/Authentication/Signin';
 
 const MainRoutes = () => {
   return (
@@ -18,8 +18,8 @@ const MainRoutes = () => {
       <Routes>
         <Route path="/" element={<Homepage/>}/>
         <Route path="home" element={<Homepage />} />
-        <Route path="signin" element={<SignIn />} />
-        <Route path="createaccount" element={<CreateAccount />} />
+        <Route path="signup" element={<Signup />} />
+        <Route path="signin" element={<Signin />} />
         <Route path="wishlist" element={<WishList />} />
         <Route path="cart" element={<Cart />} />
         <Route path="products" element={<Product />} />

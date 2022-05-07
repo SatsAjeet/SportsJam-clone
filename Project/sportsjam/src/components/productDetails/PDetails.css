@@ -1,0 +1,321 @@
+ /* *{
+    font-family:JioBold;
+}
+
+.container{
+    width: 600px;
+    height: 600px;
+    display:grid;
+    grid-template-columns: repeat(1,50%);
+    grid-gap:5px;
+    margin-left: 60px;
+    margin-top: 50px;
+}
+.container:hover{
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.boxcontainer{
+    width: 600px;
+    height: 600px;
+    display:grid;
+    grid-template-columns: repeat(2,50%);
+    grid-gap:5px;
+    margin-left: 60px;
+    border:1px solid rgba(185, 166, 180, 0.137);
+    margin-top: 50px;
+}
+.fourcontainer{
+    width: 600px;
+    height: 600px;
+    display:grid;
+    grid-template-columns: repeat(2,50%);
+    grid-gap:5px;
+    margin-left: 60px;
+    margin-top: 50px;
+}
+h3{
+    width: 170px;
+    margin-left: 105px;
+    margin-top: -45px;
+    height: 20px;
+    font-family: opensans,Arial,Helvetica;
+}
+.report{
+    margin-left: -90px;
+    font-size: 13px;
+    font-family: opensans,Arial,Helvetica;
+}
+.report:hover{
+    color:orangered;
+}
+.container2{
+    width: 600px;
+    height: 600px;
+    display:grid;
+    grid-template-columns: repeat(2,50%);
+    grid-gap:5px;
+    margin-left: 700px;
+    margin-top: -604px;
+}
+.card{
+    width:500px;
+    background-color: white;
+    border-radius: 5px;
+    padding: 10px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+a{
+    height: 20px;
+    margin-top: 50px;
+    width: 200px; 
+    margin-left: -150px;
+    font-size: 12px; 
+}
+.font1{
+    width:597px;
+    height: 40px;
+    margin-left: -25px;
+    font-family: opensans,Arial,Helvetica;
+    font-size: 20px;
+}
+.logo{
+    width: 300px;
+    display: grid;
+    grid-template-columns: repeat(4,2fr);
+    margin-top: 20px;
+    position: relative;
+}
+.line{
+    height: 1px;
+    background-color: rgb(163, 158, 158);
+    width: 600px;
+    margin-top: -180px;
+}
+.heading{
+    width: 500px;
+    height: 20px;
+    margin-left: -300px;
+    margin-top: -160px;
+}
+d{
+    margin-top: -10px;
+    margin-left: 500px;
+}
+.r{
+    font-size: 12px;
+    margin-left: -150px;
+    width: 200px;
+}
+.card2{
+    width:500px;
+    margin-top: 100px;
+    border:2px solid rgb(41, 9, 138);
+    margin-left: -250px;
+    background-color: white;
+    border-radius: 5px;
+    padding: 10px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+p{
+    font-size: 12px;
+    text-overflow:wrap;
+    overflow:wrap;
+}
+.check{
+    height: 22px;
+    width: 50px;
+    color: white;
+    background-color: black;
+    margin-left: 170px;
+    margin-top: -22px;
+}
+.yonex{
+    margin-top: 8px;
+    margin-left: 250px;
+}
+.deliver{
+    width: 190px;
+    color: rgb(106, 109, 111);
+    margin-left: 240px;
+    margin-top: -12px;
+    font-size: 14px;
+}
+.input{
+    margin-left: -130px;
+}
+
+h4{
+    text-decoration: line-through;
+    width: 100px;
+    margin-top: -290px;
+    color: rgb(138, 139, 139);
+    font-family: opensans,Arial,Helvetica;
+}
+.addcart{
+    background-color:orangered;
+    border: none;
+    color: rgb(251, 250, 249);
+    margin-left: -121px;
+    font-size: 15px;
+    height: 39px;
+    position: relative;
+    width: 180px;
+    font-family: opensans,Arial,Helvetica;
+    margin-bottom:20px;
+}
+.all-btn{
+    display: flex;
+} 
+.enter{
+    margin-top: 30px;
+    margin-bottom: 20px;
+    width: 220px;
+    color: rgb(107, 104, 104);
+}
+ .btn{
+    display: flex;
+    margin-left: 200px;
+    margin-top:-285px ;
+    height: 30px;
+} 
+ .btn > button{
+    margin-right: 8px;
+    margin-left: 10px;
+    height: 25px;
+} 
+.orange{
+    margin-left: 10px;
+    font-weight: 10;
+    font-size: 18px;
+    font-family: opensans,Arial,Helvetica;
+    color: rgb(242, 155, 40);
+}
+
+.mini{
+    font-size:20px;
+    width:200px;
+    margin-left: 970px;
+    margin-top: -650px;
+   font-weight: 10;
+   font-family: open_sanssemibold,Arial,Helvetica;
+  }
+  .racket{
+      width: 480px;
+      height: 680px;
+      display:grid;
+      grid-template-columns: repeat(2,45%);
+      grid-gap:10px;
+      margin-left: 850px;
+      margin-top: 10px;
+  }
+  .card3{
+      border-radius: 5px;
+      padding: 10px;
+      width: 200px;
+      margin-top: 20px;
+      margin-left: 20px;
+      transition: transform(15px);
+
+  }
+  .card3:hover{
+    transform: translate(-2%, -2%);
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  }
+  p{
+      font-size: 12px;
+      text-overflow:wrap;
+      font-family: open_sanssemibold,Arial,Helvetica;
+      overflow:wrap;
+  }
+  .price2{
+      font-size: 12px;
+      display:flex;
+      justify-content:left;    
+      text-overflow:wrap;
+      gap:5px;
+      font-family: open_sanssemibold,Arial,Helvetica;
+  }
+  s{
+      margin-top: 10px;
+      margin-left: 40px;
+      text-decoration: line-through;
+      color: grey;
+      font-family: open_sanssemibold,Arial,Helvetica;
+  }
+  sp{
+      margin-top: 10px;
+      height: 100%;
+      border-radius: 10px;
+      font-family: open_sanssemibold,Arial,Helvetica;
+  }
+  .fea{
+    margin-top: 10px;
+    margin-left: -220px;
+    color: orangered;
+  }
+  .descr{
+    margin-left: 200px;
+    margin-top: -20px;
+    color: black;
+     }
+  .spec{
+      margin-top: 10px;
+      width: 600px;
+      text-align: left;
+      font-size: 20px;
+      
+      margin-left: 0px;
+      background-color: rgba(141, 141, 133, 0.199);
+  }
+  .line04{
+      height: 1px;
+      width: 1000px;
+      color: rgb(211, 12, 95);
+  }
+  .japan{
+      color: gray;
+      margin-top: 10px;
+      text-align: left;
+  }
+  .india{
+      width: 100%;
+      margin-top: -17px;
+      margin-left: 200px;
+    }
+.review{
+    margin-top: 30px;
+    margin-left: -170px;
+  }
+  .underl{
+      width: 600px;
+      border: 1px solid rgb(180, 175, 175);
+  }
+  .checked {
+    color: red;
+     }
+  .rt{
+      text-align: left;
+  }
+  .rb{
+      margin-left: 30px;
+  }
+ .ym{
+     margin-left: 100px;
+     height: 40px;
+     width: 400px;
+     margin-top: -15px;
+ }
+ .login{
+     height: 20px;
+     width: 50px;
+     background-color: darkgray;
+     padding: 7px;
+     color: white;
+     border-radius: 4px;
+     margin-left: 550px;
+     margin-bottom: 10px;
+ }
+ .ratingstar{
+     margin-left: 80px;
+     margin-top: -55px;
+ } */

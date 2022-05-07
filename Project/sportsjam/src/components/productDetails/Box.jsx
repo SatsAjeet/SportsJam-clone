@@ -1,5 +1,9 @@
 import React,{useState} from "react";
+<<<<<<< HEAD
 //import data from './data.json'
+=======
+import data from './data.json'
+>>>>>>> 2bd47ac8e0a0a12948b8380040dfcd6bb1d14dd9
 //import "./PDetails.css"
 const Box= ()=>{
  let data;
