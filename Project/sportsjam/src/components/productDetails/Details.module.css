@@ -35,6 +35,7 @@
     font-weight: 600;
     width: 180px;
     font-family: opensans,Arial,Helvetica;
+    cursor: pointer;
 }
 .mainDetails {
      display: grid;

@@ -2,9 +2,34 @@ import React from "react";
 //import "./PDetails.css"
 import styles from "./Details.module.css"
 import { useSelector } from "react-redux";
+import {useNavigate} from "react-router-dom"
 
-const Details = ()=>{
-    const disData = useSelector(state=>state.discriptionData);
+const Details = () => {
+    const navigate = useNavigate()
+    const disData = JSON.parse(localStorage.getItem("productdetails"));
+    console.log(disData,"disdata")
+    const handleclick = () => {
+        const cartdata = JSON.parse(localStorage.getItem("cartdata")) || []
+        var flag
+        for (var i = 0; i < cartdata.length; i++) {
+            if (cartdata[i].desc == disData.desc) {
+                cartdata[i].qty += 1
+                localStorage.setItem("cartdata", JSON.stringify(cartdata));
+                flag = true
+                break;
+            }
+            else {
+                flag= false
+            }
+        }
+        if (flag == false) {
+            console.log("fail")
+            cartdata.push(disData)
+            localStorage.setItem("cartdata", JSON.stringify(cartdata))
+        }
+        navigate("/cart")
+    }
+    
     return (
         <div>
            <div className= {styles.mainDetails}>
@@ -23,7 +48,7 @@ const Details = ()=>{
                            <s>PRICE:{disData.price}</s>
                            <h4>Discount:{disData.discount}</h4> 
                       </div>
-                     <div className={styles.addcart}>ADD TO CART</div> 
+                     <div onClick={handleclick} className={styles.addcart}>ADD TO CART</div> 
                     <p >Remove | Refer to your friend</p>
                     <div> 
                     <img src ="https://assets.sg.content-cdn.io/css/themes/mjt02012432/images/main/twitter_share.png"/>

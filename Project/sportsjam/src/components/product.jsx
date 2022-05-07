@@ -16,7 +16,8 @@ const Product = ()=>{
    const sortedData = useSelector(state=>state.sortedData);
    
    const handleclick =(payload)=>{
-     description_data (dispatch,payload)
+     description_data(dispatch, payload)
+     localStorage.setItem("productdetails", JSON.stringify(payload))
      navigate("/description");
    }
       const handleSort = (e) => {
