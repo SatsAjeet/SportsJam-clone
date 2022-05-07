@@ -9,14 +9,16 @@ import { description_data, sorted_data } from "../redux/action";
 import { useNavigate } from "react-router-dom";
 
 const Product = ()=>{
-   const data = useSelector((state)=>state.products);
+  const store = useSelector((state) => state);
+  const data = store.products;
    const [state,setState] = useState(false)
    const navigate = useNavigate()
    const dispatch = useDispatch();
-   const sortedData = useSelector(state=>state.sortedData);
+   const sortedData = store.sortedData
    
    const handleclick =(payload)=>{
-     description_data (dispatch,payload)
+     dispatch(description_data(payload))
+     localStorage.setItem("productdetails", JSON.stringify(payload))
      navigate("/description");
    }
       const handleSort = (e) => {
@@ -25,7 +27,7 @@ const Product = ()=>{
             return Number(a.mrp)-Number(b.mrp)
           })
           
-          sorted_data(dispatch,Sdata)
+          dispatch(sorted_data(Sdata))
           setState(true)
       
           
@@ -33,13 +35,13 @@ const Product = ()=>{
           const Sdata =   data.sort((a,b)=>{
             return Number(b.mrp)-Number(a.mrp)
           })
-          sorted_data(dispatch,Sdata)
+          dispatch(sorted_data(Sdata))
           setState(true)
         }
       }
       
     return (
-        <div style={{display:"flex",gap:"100px"}}>
+        <div style={{display:"flex",gap:"100px",justifyContent:"space-between"}}>
             <div className={styles.menu}>
                  <div className={styles.P}>CATEGORY MENU</div>
                  <div className={styles.catagary}>
@@ -220,13 +222,13 @@ const Product = ()=>{
              />
 
             </div>
-            <div>
-            <div onClick ={handleSort} style={{display:"flex",justifyContent:"right",gap:"35%"}}>
+            <div style={{width: '90%', margin:"auto"}}>
+            <div onClick ={handleSort} style={{display:"flex",justifyContent:"space-between",alignItems: "center",width:"100%"}}>
                 <h3>Found  {data.length}  product(s)</h3>
                 <select  style={{width:"150px",height:"40px",margin:"30px"}}>
                     <option value ="">SORT BY</option>
-                    <option value="asc">Price low to heigh</option>
-                    <option value="desc">Price heigh to low</option>
+                    <option value="asc">Price low to high</option>
+                    <option value="desc">Price high to low</option>
                     <option value="">Discount</option>
                     <option value="">Popularty</option>
                     <option value="">Relevance</option>
@@ -235,39 +237,62 @@ const Product = ()=>{
             <div className={styles.grid}>
             { state ? (
               sortedData.map(elem => {
-               return <>
-        
-               <div onClick={()=>{handleclick(elem)}} className={styles.viewsshow}>
-              
-                  <img style = {{width:"200px"}} src ={elem.img} alt=""/>
-                           <p>{elem.title}</p>
-                          <div style={{display:"flex", flexDirection:"row" ,gap:"10px",justifyContent:"center"}}>
-                             <s>{elem.price}</s>
-                             <h3>RS.{elem.mrp}</h3>
-                             <p>{elem.discount}</p>
-                          </div>
-                    
-                
-                </div>
-        
-               </>
+               return (
+                 <>
+                   <div
+                     onClick={() => {
+                       handleclick(elem);
+                     }}
+                     className={styles.viewsshow}
+                     style={{ textAlign: "center" }}
+                   >
+                     <img style={{ width: "100%" }} src={elem.img} alt="" />
+                     <h3>{elem.title}</h3>
+                     <div
+                       style={{
+                         display: "flex",
+                         flexDirection: "row",
+                         gap: "10px",
+                         justifyContent: "center",
+                       }}
+                     >
+                       <s>{elem.price}</s>
+                       <h3>RS.{elem.mrp}</h3>
+                       <p>{elem.discount}</p>
+                     </div>
+                   </div>
+                 </>
+               );
                })
              ):    
              data.map(elem => {
 
-                return <>
-      
-                      <div onClick={()=>{handleclick(elem)}}  className={styles.viewsshow}>
-                           <img style = {{width:"200px"}} src ={elem.img} alt=""/>
-                           <p>{elem.title}</p>
-                          <div style={{display:"flex", flexDirection:"row" ,gap:"10px",justifyContent:"center"}}>
-                             <s>{elem.price}</s>
-                             <h3>RS.{elem.mrp}</h3>
-                             <p>{elem.discount}</p>
-                          </div>
+                return (
+                  <>
+                    <div
+                      onClick={() => {
+                        handleclick(elem);
+                      }}
+                      className={styles.viewsshow}
+                      style={{textAlign: 'center'}}
+                    >
+                      <img style={{ width: "100%" }} src={elem.img} alt="" />
+                      <h3>{elem.title}</h3>
+                      <div
+                        style={{
+                          display: "flex",
+                          flexDirection: "row",
+                          gap: "10px",
+                          justifyContent: "center",
+                        }}
+                      >
+                        <s>{elem.price}</s>
+                        <h3>RS.{elem.mrp}</h3>
+                        <p>{elem.discount}</p>
                       </div>
-      
-                 </>
+                    </div>
+                  </>
+                );
               })
             }
          </div>

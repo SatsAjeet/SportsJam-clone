@@ -1,40 +1,95 @@
+<<<<<<<< HEAD:Project/sportsjam/src/components/Authentication/Signup.jsx
 import React, { useEffect } from "react";
-import { useState } from "react";
-import "./Signup.css";
-import validation from "./validation";
+import {useNavigate} from "react-router-dom"
 const Signup = ({ submitForm }) => {
-  const [value, setValue] = useState({
-    name: "",
-    number: "",
-    email: "",
-    password: "",
+  const navigate = useNavigate()
+const [name, setname] = React.useState("");
+const [mobile, setmobile] = React.useState("");
+const [email, setemail] = React.useState("");
+const [password, setpassword] = React.useState("");
+const [formData, setFormData] = React.useState({
+    status: false,
   });
-  const [errors, setErrors] = useState({});
-  const [data, setData] = useState(false);
+const handleChange = (e) => {
+  const type = e.target.name;
+  if (type == "name") {
+    const inputName = e.target.value;
+    setname(e.target.value);
+    setFormData({ ...formData, [inputName]: e.target.value });
+  } else if (type == "number") {
+    const inputName = e.target.value;
+    setmobile(e.target.value);
+    setFormData({ ...formData, [inputName]: e.target.value });
+  } else if (type == "email") {
+    const inputName = e.target.value;
+    setemail(e.target.value);
+    setFormData({ ...formData, [inputName]: e.target.value });
+  } else if (type == "password") {
+    const inputName = e.target.value;
+    setpassword(e.target.value);
+    setFormData({ ...formData, [inputName]: e.target.value });
+  } 
+};
 
-  const handleChange = (e) => {
-    setValue({
-      ...value,
-      [e.target.name]: e.target.value,
-    });
+const handleFormSubmit = (event) => {
+  event.preventDefault();
+  const postvalue = {
+    name: name,
+    email: email,
+    mobile: mobile,
+    email: email,
+    password: password,
   };
+  const data = JSON.parse(localStorage.getItem("registeration")) || []
+  data.push(postvalue);
+  localStorage.setItem("registeration", JSON.stringify(data));
+  setname("")
+  setemail("")
+  setmobile("")
+  setpassword("")
+  alert("Registeration Success!");
+  navigate("/signin")
+};
 
-  const handleFormSubmit = (e) => {
-    e.preventDefault();
-    setErrors(validation(value));
-    setData(true);
-  };
-  useEffect(() => {
-    if (Object.keys(errors).length === 0 && data) {
-      submitForm(true);
-    }
-  });
   return (
     <>
-      <div className="s">
-        <div className="s1">
-          <h3 style={{ color: "yellow", textAlign: "center" }}>NEW USER</h3>
-          <hr style={{ color: "#ffffff" }} />
+      <div
+        style={{
+          display: "flex",
+          width: "100%",
+          margin: "20px auto",
+          height: "auto",
+          justifyContent: "space-evenly",
+        }}
+      >
+        <h3 style={{ color: "#f6a534", textAlign: "center" }}>NEW USER</h3>
+        <h3 style={{ color: "#f6a534", textAlign: "center" }}>REGISTRATION</h3>
+      </div>
+      <div
+        style={{
+          background: "#f6a534",
+          width: "100%",
+          height: "1px",
+          margin: "0px",
+        }}
+      ></div>
+      <div
+        style={{
+          display: "flex",
+          width: "100%",
+          margin: "20px auto",
+          height: "auto",
+          justifyContent: "space-evenly",
+        }}
+      >
+        <div
+          style={{
+            height: "auto",
+            width: "40%",
+            textAlign: "justified",
+            lineHeight: "1.6",
+          }}
+        >
           <p>
             At Sportsjam.in, buy your favourite brand and sportsgear at great
             prices. Don't forget to use our welcome gift vouchers (worth
@@ -50,70 +105,73 @@ const Signup = ({ submitForm }) => {
         </div>
 
         {/* register */}
-        <div className="s1">
-          <h3 style={{ color: "yellow", textAlign: "center" }}>REGISTRATION</h3>
-          <hr style={{ background: "yellow" }} />
-          <p>
-            First Name *{" "}
-            <input
-              type="name"
-              name="name"
-              value={value.name}
-              onChange={handleChange}
-            />
-            {errors.name && <p>{errors.name}</p>}
-          </p>
-          <p>
-            Mobile No * <button>91</button>
-            <input
-              type="number"
-              name="number"
-              value={value.number}
-              onChange={handleChange}
-            />
-            {errors.number && <p>{errors.number}</p>}
-          </p>
-          <p>
-            Email *{" "}
-            <input
-              type="email"
-              name="email"
-              value={value.email}
-              onChange={handleChange}
-            />
-            {errors.email && <p>{errors.email}</p>}
-          </p>
-          <p>
-            Password*{" "}
-            <input
-              type="password"
-              name="password"
-              value={value.password}
-              onChange={handleChange}
-            />
-            {errors.password && <p>{errors.password}</p>}
-          </p>
-          <p>
-            Confirm Password *{" "}
-            <input
-              type="password"
-              name="password"
-              value={value.password}
-              onChange={handleChange}
-            />
-          </p>
-          <button
-            style={{
-              backgroundColor: "#f49500",
-              color: "white",
-              width: "55%",
-              height: "12%",
-              borderRadius: "10%",
-            }}
-            onClick={handleFormSubmit}
-          >
-            Submit
-          </button>
+        <div
+          style={{
+            height: "auto",
+            width: "23%",
+            textAlign: "justified",
+            lineHeight: "3.6",
+          }}
+        >
+          <form onSubmit={handleFormSubmit}>
+            <div style={{ display: "flex", justifyContent: "space-between" }}>
+              <p>First Name * </p>
+              <input
+                style={{ height: "40px", width: "240px" }}
+                type="name"
+                name="name"
+                value={name}
+                onChange={handleChange}
+                required
+              />
+            </div>
+            <div style={{ display: "flex", justifyContent: "space-between" }}>
+              <p>Mobile No *</p>
+              <input
+                style={{ height: "40px", width: "240px" }}
+                type="number"
+                name="number"
+                value={mobile}
+                onChange={handleChange}
+                required
+              />
+            </div>
+            <div style={{ display: "flex", justifyContent: "space-between" }}>
+              <p>Email * </p>
+              <input
+                style={{ height: "40px", width: "240px" }}
+                type="email"
+                name="email"
+                value={email}
+                onChange={handleChange}
+                required
+              />
+            </div>
+            <div style={{ display: "flex", justifyContent: "space-between" }}>
+              <p>Password* </p>
+              <input
+                style={{ height: "40px", width: "240px" }}
+                type="password"
+                name="password"
+                value={password}
+                onChange={handleChange}
+                required
+              />
+            </div>
+            <button
+              type="submit"
+              style={{
+                backgroundColor: "#f49500",
+                color: "white",
+                width: "100%",
+                height: "35px",
+                borderRadius: "10px",
+                cursor: "pointer"
+              }}
+            >
+              Submit
+            </button>
+          </form>
           <p style={{ fontSize: "12" }}>
             By clicking "Register" button, you confirm that you accept our terms
             and conditions.
@@ -125,3 +183,188 @@ const Signup = ({ submitForm }) => {
 };
 
 export default Signup;
+========
+import React, { useEffect } from "react";
+import {useNavigate} from "react-router-dom"
+const Signup = ({ submitForm }) => {
+  const navigate = useNavigate()
+const [name, setname] = React.useState("");
+const [mobile, setmobile] = React.useState("");
+const [email, setemail] = React.useState("");
+const [password, setpassword] = React.useState("");
+const [formData, setFormData] = React.useState({
+    status: false,
+  });
+const handleChange = (e) => {
+  const type = e.target.name;
+  if (type == "name") {
+    const inputName = e.target.value;
+    setname(e.target.value);
+    setFormData({ ...formData, [inputName]: e.target.value });
+  } else if (type == "number") {
+    const inputName = e.target.value;
+    setmobile(e.target.value);
+    setFormData({ ...formData, [inputName]: e.target.value });
+  } else if (type == "email") {
+    const inputName = e.target.value;
+    setemail(e.target.value);
+    setFormData({ ...formData, [inputName]: e.target.value });
+  } else if (type == "password") {
+    const inputName = e.target.value;
+    setpassword(e.target.value);
+    setFormData({ ...formData, [inputName]: e.target.value });
+  } 
+};
+
+const handleFormSubmit = (event) => {
+  event.preventDefault();
+  const postvalue = {
+    name: name,
+    email: email,
+    mobile: mobile,
+    password: password,
+  };
+  const data = JSON.parse(localStorage.getItem("registeration")) || []
+  data.push(postvalue);
+  localStorage.setItem("registeration", JSON.stringify(data));
+  setname("")
+  setemail("")
+  setmobile("")
+  setpassword("")
+  alert("Registeration Success!");
+  navigate("/signin")
+};
+
+  return (
+    <>
+      <div
+        style={{
+          display: "flex",
+          width: "100%",
+          margin: "20px auto",
+          height: "auto",
+          justifyContent: "space-evenly",
+        }}
+      >
+        <h3 style={{ color: "#f6a534", textAlign: "center" }}>NEW USER</h3>
+        <h3 style={{ color: "#f6a534", textAlign: "center" }}>REGISTRATION</h3>
+      </div>
+      <div
+        style={{
+          background: "#f6a534",
+          width: "100%",
+          height: "1px",
+          margin: "0px",
+        }}
+      ></div>
+      <div
+        style={{
+          display: "flex",
+          width: "100%",
+          margin: "20px auto",
+          height: "auto",
+          justifyContent: "space-evenly",
+        }}
+      >
+        <div
+          style={{
+            height: "auto",
+            width: "40%",
+            textAlign: "justified",
+            lineHeight: "1.6",
+          }}
+        >
+          <p>
+            At Sportsjam.in, buy your favourite brand and sportsgear at great
+            prices. Don't forget to use our welcome gift vouchers (worth
+            Rs.2000)* for more savings!
+          </p>
+          <p>Register online and and enjoy the following benefits:</p>
+          <p>
+            <li>Get Discount Vouchers, Special Promotions & Offers</li>
+            <li>Checkout faster while making your purchases</li>
+            <li>View your Order History and track your Order Status</li>
+            <li>Make changes to your account information or password</li>
+          </p>
+        </div>
+
+        {/* register */}
+        <div
+          style={{
+            height: "auto",
+            width: "23%",
+            textAlign: "justified",
+            lineHeight: "3.6",
+          }}
+        >
+          <form onSubmit={handleFormSubmit}>
+            <div style={{ display: "flex", justifyContent: "space-between" }}>
+              <p>First Name * </p>
+              <input
+                style={{ height: "40px", width: "240px" }}
+                type="name"
+                name="name"
+                value={name}
+                onChange={handleChange}
+                required
+              />
+            </div>
+            <div style={{ display: "flex", justifyContent: "space-between" }}>
+              <p>Mobile No *</p>
+              <input
+                style={{ height: "40px", width: "240px" }}
+                type="number"
+                name="number"
+                value={mobile}
+                onChange={handleChange}
+                required
+              />
+            </div>
+            <div style={{ display: "flex", justifyContent: "space-between" }}>
+              <p>Email * </p>
+              <input
+                style={{ height: "40px", width: "240px" }}
+                type="email"
+                name="email"
+                value={email}
+                onChange={handleChange}
+                required
+              />
+            </div>
+            <div style={{ display: "flex", justifyContent: "space-between" }}>
+              <p>Password* </p>
+              <input
+                style={{ height: "40px", width: "240px" }}
+                type="password"
+                name="password"
+                value={password}
+                onChange={handleChange}
+                required
+              />
+            </div>
+            <button
+              type="submit"
+              style={{
+                backgroundColor: "#f49500",
+                color: "white",
+                width: "100%",
+                height: "35px",
+                borderRadius: "10px",
+                cursor: "pointer"
+              }}
+            >
+              Submit
+            </button>
+          </form>
+          <p style={{ fontSize: "12" }}>
+            By clicking "Register" button, you confirm that you accept our terms
+            and conditions.
+          </p>
+        </div>
+      </div>
+    </>
+  );
+};
+
+export default Signup;
+>>>>>>>> 9d7522ba9b56f53c8c3efd01664d6bdc982e0799:Project/sportsjam/src/components/Signup.jsx

@@ -8,7 +8,7 @@ import {
 } from "../redux/action";
 import { useSelector, useDispatch } from "react-redux";
 import { useNavigate } from "react-router-dom";
-import cartdatavalue from "../cartdata.json";
+
 
 const Div = styled.div`
   padding: 10px;
@@ -91,14 +91,14 @@ const Cart = () => {
 
   const handleDelete = (id) => {
     dispatch(delete_cart_data(id));
-    localStorage.setItem("cartdata", JSON.stringify(data));
+    const data1 = data.filter((elem) => id !== elem.id);
+    localStorage.setItem("cartdata", JSON.stringify(data1));
     if (data.length == 1) {
       localStorage.removeItem("cartdata");
     }
-    call(data);
+    call(data1);
   };
   React.useEffect(() => {
-    //localStorage.setItem('cartdata', JSON.stringify(cartdatavalue))
     let data = JSON.parse(localStorage.getItem("cartdata")) || [];
     dispatch(cart_data(data));
     call(data);
@@ -106,11 +106,12 @@ const Cart = () => {
   const handleDecrease = (item) => {
     if (item.qty == 1) {
       dispatch(delete_cart_data(item.id));
-      localStorage.setItem("cartdata", JSON.stringify(data));
+      const data1 = data.filter((elem) => item.id !== elem.id);
+      localStorage.setItem("cartdata", JSON.stringify(data1));
       if (data.length == 1) {
         localStorage.removeItem("cartdata");
       }
-      call(data);
+      call(data1);
     } else {
       dispatch(decrease_qty(item.id));
       localStorage.setItem("cartdata", JSON.stringify(data));
@@ -130,14 +131,16 @@ const Cart = () => {
     setValue(subTotal);
   };
   const handleChangeVoucher = (e) => {
-    console.log(e)
+    setVoucher(e.target.value);
   }
-  const handleVoucher = () => {
-    if (voucher == "masai") {
-      
+  const handleVoucher = (e) => {
+    e.preventDefault();
+    if (voucher == "masai30") {
+      const discount= Math.floor(value*0.7)
+      setValue(discount)
     }
     else {
-      alert("Invalid Coupon")
+      alert("APPLY: masai30")
     }
     setVoucher("")
   }
@@ -288,31 +291,35 @@ const Cart = () => {
           <p style={{ color: "gray", fontSize: "12px" }}>
             only one coupon code can be used per order at this time
           </p>
-          <input
-            style={{
-              width: "300px",
-              marginBottom: "10px",
-              border: "1px solid rgb(193, 193, 193)",
-            }}
-            value={voucher}
-            type="text"
-            placeholder="Voucher Code"
-            onchange={(e)=>{handleChangeVoucher()}}
-          />
-          <br />
-          <button
-            onClick={handleVoucher}
-            style={{
-              color: "white",
-              background: "gray",
-              border: "0px",
-              fontSize: "12px",
-              padding: "5px 10px",
-              borderRadius: "3px",
-            }}
-          >
-            APPLY
-          </button>
+          <form onSubmit={handleVoucher}>
+            <input
+              style={{
+                width: "300px",
+                marginBottom: "10px",
+                border: "1px solid rgb(193, 193, 193)",
+              }}
+              value={voucher}
+              type="text"
+              placeholder="Voucher Code"
+              onChange={(e) => {
+                handleChangeVoucher(e);
+              }}
+            />
+            <br />
+            <button
+              type="submit"
+              style={{
+                color: "white",
+                background: "gray",
+                border: "0px",
+                fontSize: "12px",
+                padding: "5px 10px",
+                borderRadius: "3px",
+              }}
+            >
+              APPLY
+            </button>
+          </form>
         </div>
       </div>
     </>

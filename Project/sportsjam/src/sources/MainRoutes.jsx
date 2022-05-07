@@ -6,10 +6,11 @@ import Navbar from "../components/Navbar";
 import Cart from "../components/cart";
 import WishList from "../components/WishList";
 import Product from "../components/product";
-import Description from "../components/productDetails/Description";
+import Details from "../components/productDetails/Details";
 import Footer from "../components/Footer";
-import Signup from '../components/Authentication/Signup';
-import Signin from '../components/Authentication/Signin';
+import Signup from '../components/Signup';
+import Signin from '../components/Signin';
+import {Main} from '../components/payment/Main';
 
 
 
@@ -26,7 +27,8 @@ const MainRoutes = () => {
         <Route path="wishlist" element={<WishList />} />
         <Route path="cart" element={<Cart />} />
         <Route path="products" element={<Product />} />
-        {/* <Route path="description" element={<Description />} /> */}
+        <Route path="description" element={<Details />} />
+        <Route path="payment" element={<Main/>} />
       </Routes>
 
  

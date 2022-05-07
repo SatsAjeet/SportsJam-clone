@@ -5,4 +5,5 @@ export const INCREASE_QTY = "INCCHANGE"
 export const DECREASE_QTY = "DECCHANGE"
 export const CART_DATA = "cart_DATA";
 export const SET_COUNT = "setcount";
+export const LOGIN = "login";
 
