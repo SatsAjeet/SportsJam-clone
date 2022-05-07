@@ -12,8 +12,6 @@ const handleDec=()=>{
   setCount(count-1)
   }
 }
-
-    
   return <>
  
 

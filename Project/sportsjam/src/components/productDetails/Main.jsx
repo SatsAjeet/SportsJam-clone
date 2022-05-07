@@ -1,9 +1,8 @@
 import React,{useState} from "react";
 import CartButton from './CartButton'
-import main from '../main.json';
+import Main from './Main.json';
 import "./PDetails.css"
 const Main = ()=>{
-
 const [count, setCount] = useState(0);
 
     const counter =()=>{
@@ -18,7 +17,7 @@ const [count, setCount] = useState(0);
             <div className="line"></div>
             <div className="heading">Yonex Astrox 99 Pro Badminton Racket (Cherry Sunburst, Unstrung)</div>
            
-            {main.map(item => (
+            {Main.map(item => (
                 <div key={item.id}>
                    
                   

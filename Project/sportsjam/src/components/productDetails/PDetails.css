@@ -221,7 +221,7 @@ h4{
     transform: translate(-2%, -2%);
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   }
-  t{
+  p{
       font-size: 12px;
       text-overflow:wrap;
       font-family: open_sanssemibold,Arial,Helvetica;
@@ -235,7 +235,7 @@ h4{
       gap:5px;
       font-family: open_sanssemibold,Arial,Helvetica;
   }
-  cut{
+  s{
       margin-top: 10px;
       margin-left: 40px;
       text-decoration: line-through;
