@@ -1,11 +1,25 @@
 import React from 'react'
 import { Cart, Nav1, Nav1Flex, Nav2, Nav3, SearchBar } from './Navbar.styles'
 import { Link, useNavigate } from 'react-router-dom'
-import Styles from "./Navbar.module.css"
+import Styles from "./Navbar.module.css";
+import NavDropDown from './NavDropDown';
+import { useSelector, useDispatch } from "react-redux";
+import {setCount} from "../redux/action"
+
 
 const Navbar = () => {
 
-    const navigate=useNavigate();
+    const navigate = useNavigate();
+    const store = useSelector((state) => state)
+    const count = store.count
+    const dispatch = useDispatch()
+
+    React.useEffect(() => {
+        const count = JSON.parse(localStorage.getItem("cartdata")) || 0;
+        if (count != 0) {
+            dispatch(setCount(count.length))
+        }
+    },[])
 
   return (
     <div>
@@ -21,7 +35,7 @@ const Navbar = () => {
             </Nav1Flex>
             <Nav1Flex>
                 <span className="iconify" data-icon="bi:person" data-width="20" data-height="20"></span>
-                <Link to="/createaccount" className={Styles.link}>Create Account</Link>
+                <Link to="/Signup" className={Styles.link}>Create Account</Link>
             </Nav1Flex>
             <Nav1Flex>
                 <span className="iconify" data-icon="ant-design:heart-outlined" data-width="20" data-height="20"></span>
@@ -39,6 +53,10 @@ const Navbar = () => {
                 </SearchBar>
                 <Cart>
                     <span className="iconify" data-icon="entypo:shopping-cart" data-width="50" data-height="50"></span>
+                    <div className={Styles.cartcount}>
+                        {/* show cart count here */}
+                        <h2>{count}</h2>
+                    </div>
                     <Link to="/cart" className={Styles.cart}>Shopping Cart</Link>
                 </Cart>
             </Nav2>
@@ -48,7 +66,7 @@ const Navbar = () => {
 
             {/* nav3 */}
             <Nav3>
-                <h1>Dropdown Menu</h1>
+                <NavDropDown/>
             </Nav3>
             <hr />
 

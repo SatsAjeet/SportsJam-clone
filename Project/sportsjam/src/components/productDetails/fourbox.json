@@ -1,0 +1,41 @@
+
+ [
+  {
+    "id": 1,
+    "title": "YONEX Astrox Tour 8500 Badminton Racket (Blue, Unstrung)",
+    "imgURL":
+      "https://storage.sg.content-cdn.io/cdn-cgi/image/width=200,height=200,quality=75,format=auto,fit=cover,g=top/in-resources/b368029c-a4dd-448a-a888-58348cb1b144/Images/ProductImages/Source/YXASTR8500BL.jpg",
+    "mrp": "₹ 199.00",
+    "sellingPrice": "₹ 132.00",
+    "discount": "33%"
+  },
+  
+  {
+    "id": 8,
+    "title": "YONEX Astrox Tour 8500 Badminton Racket (Blue, Unstrung)",
+    "imgURL":
+      "https://storage.sg.content-cdn.io/cdn-cgi/image/width=200,height=200,quality=75,format=auto,fit=cover,g=top/in-resources/b368029c-a4dd-448a-a888-58348cb1b144/Images/ProductImages/Source/YXASTR8500RD.jpg",
+    "mrp": "₹ 200.00",
+    "sellingPrice": "₹ 196.00",
+    "discount": "27%"
+  }
+  ,
+  {
+    "id": 9,
+    "title": "YONEX Astrox Tour 8500 Badminton Racket (Blue, Unstrung)",
+    "imgURL":
+      "https://storage.sg.content-cdn.io/cdn-cgi/image/width=200,height=200,quality=75,format=auto,fit=cover,g=top/in-resources/b368029c-a4dd-448a-a888-58348cb1b144/Images/ProductImages/Source/YXASTR8500OR.jpg",
+    "mrp": "₹ 135.00",
+    "sellingPrice": "₹ 110.00",
+    "discount": "18%"
+  },
+  {
+    "id": 10,
+    "title": "Yonex Astrox 88D Pro Badminton Racket (Camel Gold, Unstrung)",
+    "imgURL":
+      "https://storage.sg.content-cdn.io/cdn-cgi/image/width=200,height=200,quality=75,format=auto,fit=cover,g=top/in-resources/b368029c-a4dd-448a-a888-58348cb1b144/Images/ProductImages/Source/YNAX88DPRO.jpg",
+    "mrp": "₹ 485.00",
+    "sellingPrice": "₹ 460.00",
+    "discount": "18%"
+  }
+]

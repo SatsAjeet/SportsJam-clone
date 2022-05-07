@@ -1,9 +1,10 @@
 import products from "../products.json";
-import { DESCRIPTION_DATA, SORT_DATA, CART_DATA, DELETE_CART_DATA,INCREASE_QTY,DECREASE_QTY } from "./actiontypes";
+import { DESCRIPTION_DATA, SORT_DATA, CART_DATA, DELETE_CART_DATA,INCREASE_QTY,DECREASE_QTY, SET_COUNT} from "./actiontypes";
 
 const initState = {
     products: [...products],
     cartdata: [],
+    count: 0
 }
 
 export const dataReducer = (state = initState, { type, payload }) => {
@@ -24,13 +25,15 @@ export const dataReducer = (state = initState, { type, payload }) => {
          case CART_DATA:{
              return {
                  ...state,
-                 cartdata: payload
+                 cartdata: payload,
+                 count: payload.length
              }
         }
          case DELETE_CART_DATA: {
              return {
                  ...state,
-                 cartdata: state.cartdata.filter((item) =>  item.id !== payload )
+                 cartdata: state.cartdata.filter((item) => item.id !== payload),
+                 count: state.count-1
              }
          }
          
@@ -54,6 +57,12 @@ export const dataReducer = (state = initState, { type, payload }) => {
                  })]
              }
          }
+         case SET_COUNT: {
+             return {
+                 ...state,
+                 count: payload
+             }
+             }
          default :{
              return state
          }

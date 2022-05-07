@@ -48,9 +48,9 @@ export const Cart=styled.div`
 
 // nav3
 export const Nav3=styled.div`
-    width: 98%;
-    height: 25px;
-    /* border: 1px solid grey; */
+    width: 100%;
+    height: 45px;
+    /* border: 1px solid red; */
     display: flex;
     justify-content: left;
     align-items: center;
