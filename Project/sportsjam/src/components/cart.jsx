@@ -144,6 +144,17 @@ const Cart = () => {
     }
     setVoucher("")
   }
+
+
+  const handlePayment = (value) => {
+    const paymentdata = {
+      subtotal: value,
+      shipping: 0.01*value,
+      gst: 18,
+    }
+    localStorage.setItem("paymentdata", JSON.stringify(paymentdata))
+    navigate("/payment")
+  }
   return (
     <>
       <Div>Shopping Cart</Div>
@@ -227,7 +238,7 @@ const Cart = () => {
             cursor: "pointer",
             marginTop: "10px",
           }}
-          onClick={() => navigate("/payment")}
+          onClick={() => handlePayment(value)}
         >
           PROCEED TO PAY
         </button>
