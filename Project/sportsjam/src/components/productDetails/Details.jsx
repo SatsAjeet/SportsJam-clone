@@ -10,9 +10,10 @@ const Details = () => {
     console.log(disData,"disdata")
     const handleclick = () => {
         const cartdata = JSON.parse(localStorage.getItem("cartdata")) || []
-        var flag
+        var flag= false
+        console.log("cart",cartdata)
         for (var i = 0; i < cartdata.length; i++) {
-            if (cartdata[i].desc == disData.desc) {
+            if (cartdata[i].id == disData.id) {
                 cartdata[i].qty += 1
                 localStorage.setItem("cartdata", JSON.stringify(cartdata));
                 flag = true
