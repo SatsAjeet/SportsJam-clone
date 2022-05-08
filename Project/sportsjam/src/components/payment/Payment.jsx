@@ -1,11 +1,15 @@
 import React from 'react'
 import {useNavigate} from "react-router-dom"
 import styles from "./payment.module.css"
-
+import { useSelector, useDispatch } from "react-redux";
+import { setCount } from "../../redux/action"
 
 export default function Payment() {
+    const dispatch = useDispatch()
     const navigate= useNavigate()
     const handleSubmit = () => {
+        localStorage.removeItem("cartdata");
+        dispatch(setCount(0))
         alert("Payment Success!")
         navigate("/")
     }
