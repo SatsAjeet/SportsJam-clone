@@ -1,5 +1,4 @@
 import React from 'react'
-import {NavLink} from 'react-router-dom'
 
 export default function Billing_Shipping() {
     let style1={
@@ -8,11 +7,9 @@ export default function Billing_Shipping() {
     }
   return (
       
-    <h5 className="Quick_checkout" style={{"height":"800px" ,"width":"1200px","margin":"auto"}}>
+    <div style={{height:"800px" ,width:"1200px",margin:"auto", marginBottom:"-150px"}}>
         <div style={{"display":"flex"}}>
-            <h3>Shipping address</h3> 
-            <h3 style={{"color":"red","padding":""}}>*</h3>
-            <p style={{"paddingTop":"7px"}}>Required fields</p>
+            <h2>Shipping address</h2> 
         </div>
         <form className="form">
             <div>
@@ -55,15 +52,8 @@ export default function Billing_Shipping() {
             </div>
             <p>Type in your message in less than 400 charactors and the product will sent as gift with the message of yours.</p>
             <textarea/>
-            <div style={{"display":"flex","marginTop":"10px"}}>
-                <h4>Delivery date</h4>
-                <input value=" " style={{"backgroundColor":"inherit","borderRadius":"20px"}} type="date"/>
-            </div>
         </div>
-        <h5 className="NavLink">
-            <NavLink  to="/Order_Summary">Continue</NavLink>
-        </h5>
         
-    </h5>
+    </div>
   )
 }

@@ -1,14 +1,25 @@
 import React from 'react'
-import { NavLink } from 'react-router-dom'
-
+import {useNavigate} from "react-router-dom"
+import styles from "./payment.module.css"
+import { useSelector, useDispatch } from "react-redux";
+import { setCount } from "../../redux/action"
 
 export default function Payment() {
+    const dispatch = useDispatch()
+    const navigate= useNavigate()
+    const handleSubmit = () => {
+        localStorage.removeItem("cartdata");
+        dispatch(setCount(0))
+        alert("Payment Success!")
+        navigate("/")
+    }
     
-  return (
-    <h5 className="Quick_checkout" style={{"height":"319px" ,"width":"1200px","margin":"auto"}}>
+    return (
+      <form onSubmit={handleSubmit}>
+    <div className="Quick_checkout" style={{height:"319px" ,width:"1200px",margin:"auto", }}>
         <div>
             <h5 >My Email address:</h5>
-            <input  style={{"width":"600px","borderRadius":"5px","border":"1px solid gray","height":"40px","backgroundColor":"inherit"}}/>
+            <input type="email" required style={{"width":"600px","borderRadius":"5px","border":"1px solid gray","height":"40px","backgroundColor":"inherit"}}/>
             <p >Your order details will be sent to this email address.</p>
         </div>
         <div>
@@ -34,7 +45,9 @@ export default function Payment() {
             </div>
         
         </div>
-        
-    </h5>
+        <button className={styles.pay}>PAY</button>
+            </div>
+            
+            </form>
   )
 }
