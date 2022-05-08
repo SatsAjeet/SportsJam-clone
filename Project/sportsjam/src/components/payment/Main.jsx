@@ -6,7 +6,7 @@ import Order_summary from "./Order_summary"
 import Payment from "./Payment"
  function Main() {
   return (
-      <BrowserRouter>
+      <>
         <div style={{"width":"100%","height":"90px","textAlign":"center"}}>
                 <img style={{"marginTop":"5px"}} src="https://storage.sg.content-cdn.io/in-resources/b368029c-a4dd-448a-a888-58348cb1b144/Images/userimages/logo.jpg"/>
             </div>    
@@ -18,37 +18,25 @@ import Payment from "./Payment"
                
                     
                 </div>
-               
-                   <Routes >
-                        <Route path="/" element={<Quick_checkout/>}/>
-                   </Routes>
-                    
-               
-               
+               <Quick_checkout/>
                 <div>
                     <div>Step 2</div>
                     <div>Billing & shipping Information</div>
                 </div>
-                <Routes>
-                    <Route path="/Billing_Shipping" element={<Billing_Shipping/>}/>
-                </Routes>
+                <Billing_Shipping/>
                 <div>
                     <div>Step 3</div>
                     <div>Order Summary & Logistic</div>
                 </div>
-                <Routes>
-                    <Route path="/Order_summary" element={<Order_summary/>}/>
-                </Routes>
+                <Order_summary/>
                 <div>
                     <div>Step 4</div>
                     <div>Payment Option</div>
                 </div>
-                <Routes>
-                    <Route path="/Payment" element={<Payment/>}/>
-                </Routes>
+                <Payment/>
             </div>
             
-      </BrowserRouter>
+      </>
 
            
     

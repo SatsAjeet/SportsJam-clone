@@ -3,7 +3,7 @@ import {NavLink} from 'react-router-dom'
 
 export default function Order_summary() {
     let style1={
-        lineHeight:"0px"
+        lineHeight:"1.6"
     }
   return (
       
