@@ -7,11 +7,11 @@ export default function Billing_Shipping() {
     }
   return (
       
-    <div style={{height:"800px" ,width:"1200px",margin:"auto", marginBottom:"-150px"}}>
+    <div style={{height:"800px" ,width:"1200px",margin:"auto", marginBottom:"-210px"}}>
         <div style={{"display":"flex"}}>
-            <h2>Shipping address</h2> 
+            <h2 style={{marginLeft:"70px"}}>Shipping address</h2> 
         </div>
-        <form className="form">
+        <form className="form" style={{marginLeft:"70px"}}>
             <div>
                 <h4>Name<h3 style={style1}>*</h3></h4><input required />
             </div>
@@ -45,7 +45,7 @@ export default function Billing_Shipping() {
             
             
         </form>
-        <div style={{"paddingLeft":"30px"}} >
+        <div style={{marginLeft:"70px",marginTop:"20px"}}>
             <div style={{"display":"flex" ,"alignItems":"center"}}>
                 <input type="radio"/>
                 <h5>Send this product as gift</h5>
