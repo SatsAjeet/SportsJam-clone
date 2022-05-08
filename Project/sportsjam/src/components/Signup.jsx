@@ -57,11 +57,14 @@ const handleFormSubmit = (event) => {
           width: "100%",
           margin: "20px auto",
           height: "auto",
-          justifyContent: "space-evenly",
+          justifyContent: "space-around",
+          alignItems:"center",
+          marginLeft:"70px",
+          color: "#f6a534"
         }}
       >
-        <h3 style={{ color: "#f6a534", textAlign: "center" }}>NEW USER</h3>
-        <h3 style={{ color: "#f6a534", textAlign: "center" }}>REGISTRATION</h3>
+        <h2>NEW USER</h2>
+        <h2>REGISTRATION</h2>
       </div>
       <div
         style={{
