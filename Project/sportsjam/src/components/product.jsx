@@ -286,8 +286,8 @@ const Product = ()=>{
                           justifyContent: "center",
                         }}
                       >
-                        <s>{elem.price}</s>
-                        <h3>RS.{elem.mrp}</h3>
+                        <s>Price:{elem.price}</s>
+                        <h3>MRP:{elem.mrp}</h3>
                         <p>{elem.discount}</p>
                       </div>
                     </div>
