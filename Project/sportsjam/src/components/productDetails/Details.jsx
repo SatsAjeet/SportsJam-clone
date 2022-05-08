@@ -7,7 +7,6 @@ import { useNavigate } from "react-router-dom"
 const Details = () => {
     const navigate = useNavigate()
     const disData = JSON.parse(localStorage.getItem("productdetails"));
-    console.log(disData,"disdata")
     const handleclick = () => {
         const cartdata = JSON.parse(localStorage.getItem("cartdata")) || []
         var flag= false
@@ -34,8 +33,8 @@ const Details = () => {
     return (<>
         <div>
            <div className= {styles.mainDetails}>
-                <div className="card-image">
-                        <img src ={disData.img}/>
+                <div style={{margin: "Auto"}}>
+                        <img style={{width:"600px", height:"600px"}} src ={disData.img}/>
                 </div>
                 <div className={styles.container2}>
                  <div>
