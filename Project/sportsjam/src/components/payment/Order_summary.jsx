@@ -8,7 +8,9 @@ export default function Order_summary() {
     let style1={
         lineHeight:"2"
     }
-    const data = JSON.parse(localStorage.getItem("paymentdata"))
+    const data = JSON.parse(localStorage.getItem("paymentdata")) || {subtotal: 0,
+      shipping: 0,
+      gst: 0,}
     const { subtotal, shipping, gst } = data
   return (
       
