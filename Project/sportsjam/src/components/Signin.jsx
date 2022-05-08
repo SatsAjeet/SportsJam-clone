@@ -6,12 +6,15 @@ import { Link } from "react-router-dom"
 import { useDispatch } from "react-redux"
 import {loginaction} from "../redux/action"
 const Container = styled.div`
-  height: 300px;
+  height: 370px;
   width: 400px;
-  border: 2px solid gray;
+  border: 1px solid gray;
   margin: auto;
   box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px,
     rgba(0, 0, 0, 0.22) 0px 10px 10px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    padding-top: 20px;
 `;
 function Signin() {
   const dispatch= useDispatch()
