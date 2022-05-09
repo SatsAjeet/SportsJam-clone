@@ -46,7 +46,7 @@ We are in our learning phase and this is our first clone using react, so faced m
 ## Authors
 
 - [@Satyajeet](https://github.com/SatsAjeet)
-- [@Abishek](https://github.com/abhishekmardiya)
+- [@Abhishek](https://github.com/abhishekmardiya)
 - [@Nageshwar](https://github.com/nagesh199)
 - [@Sangam](https://github.com/sangamk04)
 - [@Govind](https://github.com/gov6184)
