@@ -54,3 +54,5 @@ We are in our learning phase and this is our first clone using react, so faced m
 
 
 ## Contributing
+https://medium.com/@nageshwarkumawat1996/unit-4-group-project-sportsjam-clone-323e4d337655
+## Medium Link
