@@ -11,6 +11,40 @@ A Project done during Unit-4 construct week of Masai School
   <img src="https://cdn.freebiesupply.com/logos/large/2x/redux-logo-svg-vector.svg" width="100" height="100">
   <img src="https://cdn.pixabay.com/photo/2017/08/05/11/16/logo-2582747_640.png" width="100" height="100">
  </p>
+ 
+ ### <u>Deployed Link</u>
+
+
+Deployed with NetlifyApp 
+```
+https://mellow-selkie-e2bcd4.netlify.app/
+ ```
+
+### <u>Run Locally</u>
+
+Clone the project
+
+```
+git clone https://github.com/SatsAjeet/SportsJam-clone.git
+```
+
+Install npm packages
+
+```
+npm install
+```
+
+Run the server
+
+```
+npm start
+```
+
+View in Browser
+
+```
+go to http://localhost:3000
+```
 
 ## Functionalities associated with this website
 
